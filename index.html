@@ -1690,6 +1690,423 @@
             font-weight: 600;
         }
 
+        /* Quiz Styles */
+        .quiz-container {
+            margin: 20px 0;
+        }
+
+        .quiz-question {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #00A9B5;
+        }
+
+        .question-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .question-number {
+            background: linear-gradient(135deg, #00A9B5, #4682B4);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .question-header h4 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .option:hover {
+            background: rgba(0, 169, 181, 0.1);
+            border-color: #00A9B5;
+            transform: translateX(5px);
+        }
+
+        .option.selected {
+            background: rgba(0, 169, 181, 0.2);
+            border-color: #00A9B5;
+        }
+
+        .option.correct {
+            background: rgba(40, 167, 69, 0.2);
+            border-color: #28a745;
+        }
+
+        .option.incorrect {
+            background: rgba(220, 53, 69, 0.2);
+            border-color: #dc3545;
+        }
+
+        .option-letter {
+            background: linear-gradient(135deg, #6c757d, #495057);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .option.correct .option-letter {
+            background: linear-gradient(135deg, #28a745, #20c997);
+        }
+
+        .option.incorrect .option-letter {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+        }
+
+        .option-text {
+            flex: 1;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .quiz-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .quiz-result {
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(32, 201, 151, 0.1));
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+            border: 2px solid rgba(40, 167, 69, 0.3);
+        }
+
+        .score-display {
+            margin: 20px 0;
+        }
+
+        .score-text {
+            font-size: 18px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .score-number {
+            font-size: 36px;
+            font-weight: 800;
+            color: #28a745;
+            margin: 0 5px;
+        }
+
+        .score-total {
+            font-size: 24px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .score-message {
+            font-size: 16px;
+            color: #666;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        /* Drag and Drop Styles */
+        .drag-drop-container {
+            margin: 20px 0;
+        }
+
+        .drag-drop-instruction {
+            background: rgba(255, 193, 7, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 25px;
+        }
+
+        .drag-drop-instruction p {
+            margin: 0;
+            font-weight: 600;
+            color: #856404;
+        }
+
+        .drag-drop-game {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 25px 0;
+        }
+
+        .drag-column, .drop-column {
+            background: rgba(0, 169, 181, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .drag-column h4, .drop-column h4 {
+            text-align: center;
+            color: #00A9B5;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .draggable-items, .drop-zones {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .draggable-item {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            cursor: grab;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .draggable-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-color: #00A9B5;
+        }
+
+        .draggable-item.dragging {
+            opacity: 0.5;
+            transform: rotate(5deg);
+        }
+
+        .draggable-item .arabic-text {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .draggable-item .meaning {
+            font-size: 14px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .drop-zone {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            border: 2px dashed #ddd;
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            min-height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .drop-zone.drag-over {
+            border-color: #00A9B5;
+            background: rgba(0, 169, 181, 0.1);
+        }
+
+        .drop-zone.filled {
+            border-color: #28a745;
+            background: rgba(40, 167, 69, 0.1);
+        }
+
+        .drop-zone.correct {
+            border-color: #28a745;
+            background: rgba(40, 167, 69, 0.2);
+        }
+
+        .drop-zone.incorrect {
+            border-color: #dc3545;
+            background: rgba(220, 53, 69, 0.2);
+        }
+
+        .drop-zone .arabic-text {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #4682B4;
+        }
+
+        .drop-zone .meaning {
+            font-size: 14px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .drop-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #999;
+            font-size: 12px;
+            font-weight: 600;
+            pointer-events: none;
+        }
+
+        .drop-zone.filled .drop-indicator {
+            display: none;
+        }
+
+        .drag-drop-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        /* Final Result Styles */
+        .final-score-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .final-score-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .final-score-card h4 {
+            color: #00A9B5;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .score-breakdown {
+            margin-bottom: 25px;
+        }
+
+        .score-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .score-item:last-child {
+            border-bottom: none;
+        }
+
+        .score-total-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-top: 2px solid #00A9B5;
+            margin-top: 15px;
+        }
+
+        .score-label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .score-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: #00A9B5;
+        }
+
+        .achievement-badge {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(255, 215, 0, 0.1));
+            border-radius: 15px;
+            border: 2px solid rgba(255, 140, 0, 0.3);
+        }
+
+        .badge-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .badge-text {
+            font-size: 20px;
+            font-weight: 800;
+            color: #FF8C00;
+            margin-bottom: 5px;
+        }
+
+        .badge-description {
+            font-size: 14px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .learning-recommendation {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .learning-recommendation h4 {
+            color: #00A9B5;
+            margin-bottom: 15px;
+        }
+
+        .learning-recommendation ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .learning-recommendation li {
+            padding: 8px 0;
+            color: #666;
+            font-weight: 600;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .learning-recommendation li:before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+        }
+
         /* Responsive adjustments for materi content */
         @media (max-width: 768px) {
             .materi-content-detail {
@@ -1772,6 +2189,96 @@
             }
 
             .part-arabic {
+                font-size: 18px;
+            }
+
+            /* Quiz responsive styles */
+            .quiz-question {
+                padding: 20px 15px;
+            }
+
+            .question-header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .question-number {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            .question-header h4 {
+                font-size: 16px;
+            }
+
+            .option {
+                padding: 12px 15px;
+                gap: 10px;
+            }
+
+            .option-letter {
+                width: 25px;
+                height: 25px;
+                font-size: 12px;
+            }
+
+            .option-text {
+                font-size: 14px;
+            }
+
+            .quiz-navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .next-button, .prev-button {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .drag-drop-game {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .draggable-item, .drop-zone {
+                padding: 12px;
+            }
+
+            .draggable-item .arabic-text {
+                font-size: 18px;
+            }
+
+            .drop-zone .arabic-text {
+                font-size: 16px;
+            }
+
+            .final-score-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .final-score-card, .learning-recommendation {
+                padding: 20px 15px;
+            }
+
+            .score-item {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+
+            .achievement-badge {
+                padding: 15px;
+            }
+
+            .badge-icon {
+                font-size: 36px;
+            }
+
+            .badge-text {
                 font-size: 18px;
             }
         }
@@ -2168,6 +2675,35 @@
       <p class="feature-description">Fitur kolaborasi untuk belajar bersama teman-teman sekelas dalam suasana yang menyenangkan.</p>
      </div>
     </div>
+    <div class="learning-tips">
+     <h3 class="tips-title">💡 Tips Belajar Efektif</h3>
+     <div class="tips-grid">
+      <div class="tip-item"><span class="tip-icon">1️⃣</span>
+       <p>Mulai dari Bab 1 (Isim Tafdhil) agar pembelajaranmu lebih teratur</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">📚</span>
+       <p>Selesaikan semua materi dalam satu bab sebelum lanjut ke bab berikutnya</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🔄</span>
+       <p>Ulangi materi yang sudah dipelajari secara berkala untuk mengingat</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🗣️</span>
+       <p>Praktikkan pelafalan dengan keras dan dengarkan audio</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">✍️</span>
+       <p>Tulis catatan penting dan buat contoh kalimat sendiri</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🎯</span>
+       <p>Kerjakan semua latihan dan kuis untuk mengukur pemahaman</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">👥</span>
+       <p>Belajar bersama teman atau diskusi dengan guru</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">⏰</span>
+       <p>Belajar secara konsisten setiap hari minimal 15-20 menit</p>
+      </div>
+     </div>
+    </div>
    </section><!-- Detailed Materi Section -->
    <section class="materi-detail-section main-section" id="materi-detail">
     <div class="back-navigation"><button class="back-button" onclick="showSection('beranda')"> ← Kembali ke Beranda </button>
@@ -2255,17 +2791,29 @@
     <div class="learning-tips">
      <h3 class="tips-title">💡 Tips Belajar Efektif</h3>
      <div class="tips-grid">
-      <div class="tip-item"><span class="tip-icon">🎯</span>
-       <p>Mulai dari bab yang paling mudah menurutmu</p>
+      <div class="tip-item"><span class="tip-icon">1️⃣</span>
+       <p>Mulai dari Bab 1 (Isim Tafdhil) agar pembelajaranmu lebih teratur</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">📚</span>
+       <p>Selesaikan semua materi dalam satu bab sebelum lanjut ke bab berikutnya</p>
       </div>
       <div class="tip-item"><span class="tip-icon">🔄</span>
-       <p>Ulangi materi yang sudah dipelajari secara berkala</p>
+       <p>Ulangi materi yang sudah dipelajari secara berkala untuk mengingat</p>
       </div>
       <div class="tip-item"><span class="tip-icon">🗣️</span>
-       <p>Praktikkan pelafalan dengan keras</p>
+       <p>Praktikkan pelafalan dengan keras dan dengarkan audio</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">✍️</span>
+       <p>Tulis catatan penting dan buat contoh kalimat sendiri</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🎯</span>
+       <p>Kerjakan semua latihan dan kuis untuk mengukur pemahaman</p>
       </div>
       <div class="tip-item"><span class="tip-icon">👥</span>
-       <p>Belajar bersama teman untuk lebih seru</p>
+       <p>Belajar bersama teman atau diskusi dengan guru</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">⏰</span>
+       <p>Belajar secara konsisten setiap hari minimal 15-20 menit</p>
       </div>
      </div>
     </div>
@@ -2398,6 +2946,35 @@
       </div>
      </div>
     </div>
+    <div class="learning-tips">
+     <h3 class="tips-title">💡 Tips Belajar Efektif</h3>
+     <div class="tips-grid">
+      <div class="tip-item"><span class="tip-icon">1️⃣</span>
+       <p>Mulai dari Bab 1 (Isim Tafdhil) agar pembelajaranmu lebih teratur</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">📚</span>
+       <p>Selesaikan semua materi dalam satu bab sebelum lanjut ke bab berikutnya</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🔄</span>
+       <p>Ulangi materi yang sudah dipelajari secara berkala untuk mengingat</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🗣️</span>
+       <p>Praktikkan pelafalan dengan keras dan dengarkan audio</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">✍️</span>
+       <p>Tulis catatan penting dan buat contoh kalimat sendiri</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🎯</span>
+       <p>Kerjakan semua latihan dan kuis untuk mengukur pemahaman</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">👥</span>
+       <p>Belajar bersama teman atau diskusi dengan guru</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">⏰</span>
+       <p>Belajar secara konsisten setiap hari minimal 15-20 menit</p>
+      </div>
+     </div>
+    </div>
    </section><!-- Interactive Section -->
    <section class="interactive-section main-section" id="latihan">
     <h2 class="section-title">🎯 Latihan Interaktif</h2>
@@ -2429,6 +3006,35 @@
       </div>
       <h3 class="interactive-title">Mewarnai &amp; Menggambar</h3>
       <p class="interactive-description">Ekspresikan kreativitasmu sambil belajar dengan aktivitas mewarnai dan menggambar bertema Arab.</p>
+     </div>
+    </div>
+    <div class="learning-tips">
+     <h3 class="tips-title">💡 Tips Belajar Efektif</h3>
+     <div class="tips-grid">
+      <div class="tip-item"><span class="tip-icon">1️⃣</span>
+       <p>Mulai dari Bab 1 (Isim Tafdhil) agar pembelajaranmu lebih teratur</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">📚</span>
+       <p>Selesaikan semua materi dalam satu bab sebelum lanjut ke bab berikutnya</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🔄</span>
+       <p>Ulangi materi yang sudah dipelajari secara berkala untuk mengingat</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🗣️</span>
+       <p>Praktikkan pelafalan dengan keras dan dengarkan audio</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">✍️</span>
+       <p>Tulis catatan penting dan buat contoh kalimat sendiri</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🎯</span>
+       <p>Kerjakan semua latihan dan kuis untuk mengukur pemahaman</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">👥</span>
+       <p>Belajar bersama teman atau diskusi dengan guru</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">⏰</span>
+       <p>Belajar secara konsisten setiap hari minimal 15-20 menit</p>
+      </div>
      </div>
     </div>
    </section><!-- Bab 1: Isim Tafdhil Content -->
@@ -2535,6 +3141,35 @@
       </div>
      </div>
     </div>
+    <div class="learning-tips">
+     <h3 class="tips-title">💡 Tips Belajar Efektif</h3>
+     <div class="tips-grid">
+      <div class="tip-item"><span class="tip-icon">1️⃣</span>
+       <p>Mulai dari Bab 1 (Isim Tafdhil) agar pembelajaranmu lebih teratur</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">📚</span>
+       <p>Selesaikan semua materi dalam satu bab sebelum lanjut ke bab berikutnya</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🔄</span>
+       <p>Ulangi materi yang sudah dipelajari secara berkala untuk mengingat</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🗣️</span>
+       <p>Praktikkan pelafalan dengan keras dan dengarkan audio</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">✍️</span>
+       <p>Tulis catatan penting dan buat contoh kalimat sendiri</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🎯</span>
+       <p>Kerjakan semua latihan dan kuis untuk mengukur pemahaman</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">👥</span>
+       <p>Belajar bersama teman atau diskusi dengan guru</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">⏰</span>
+       <p>Belajar secara konsisten setiap hari minimal 15-20 menit</p>
+      </div>
+     </div>
+    </div>
    </section><!-- Petunjuk Penggunaan -->
    <section class="adventure-map main-section" id="petunjuk">
     <h2 class="section-title">📋 Petunjuk Penggunaan</h2>
@@ -2562,6 +3197,35 @@
      <div class="feature-card"><span class="feature-icon">❓</span>
       <h3 class="feature-title">Butuh Bantuan?</h3>
       <p class="feature-description">Jika mengalami kesulitan, tanyakan pada guru atau teman. Jangan ragu untuk mencoba berkali-kali!</p>
+     </div>
+    </div>
+    <div class="learning-tips">
+     <h3 class="tips-title">💡 Tips Belajar Efektif</h3>
+     <div class="tips-grid">
+      <div class="tip-item"><span class="tip-icon">1️⃣</span>
+       <p>Mulai dari Bab 1 (Isim Tafdhil) agar pembelajaranmu lebih teratur</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">📚</span>
+       <p>Selesaikan semua materi dalam satu bab sebelum lanjut ke bab berikutnya</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🔄</span>
+       <p>Ulangi materi yang sudah dipelajari secara berkala untuk mengingat</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🗣️</span>
+       <p>Praktikkan pelafalan dengan keras dan dengarkan audio</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">✍️</span>
+       <p>Tulis catatan penting dan buat contoh kalimat sendiri</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🎯</span>
+       <p>Kerjakan semua latihan dan kuis untuk mengukur pemahaman</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">👥</span>
+       <p>Belajar bersama teman atau diskusi dengan guru</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">⏰</span>
+       <p>Belajar secara konsisten setiap hari minimal 15-20 menit</p>
+      </div>
      </div>
     </div>
    </section><!-- Footer -->
@@ -2607,6 +3271,12 @@
         });
 
         function initializeApp() {
+            // Hide all sections first
+            const sections = document.querySelectorAll('.main-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
             // Show beranda section by default
             showSection('beranda');
             
@@ -2671,6 +3341,12 @@
             const targetSection = document.getElementById(sectionId);
             if (targetSection) {
                 targetSection.classList.add('active');
+                
+                // Scroll to top of the page smoothly
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             }
         }
 
@@ -2709,6 +3385,12 @@
 
         function showMateriPengertian() {
             showInlineMessage('📖 Membuka Materi 1: Pengertian & Ciri-ciri Isim Tafdhil!', 'success');
+            
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
             
             // Create detailed content for Materi 1
             const materiContent = `
@@ -2807,9 +3489,14 @@
                             <div class="progress-fill" style="width: 25%;"></div>
                         </div>
                         <p class="progress-text">Materi 1 dari 4 selesai (25%)</p>
-                        <button class="next-button" onclick="showMateriMufradat()">
-                            Lanjut ke Materi 2: Contoh Mufradat →
-                        </button>
+                        <div class="navigation-buttons">
+                            <button class="prev-button" onclick="resetBabIsimTafdhil()">
+                                ← Kembali ke Bab 1
+                            </button>
+                            <button class="next-button" onclick="showMateriMufradat()">
+                                Lanjut ke Materi 2: Contoh Mufradat →
+                            </button>
+                        </div>
                     </div>
                 </div>
             `;
@@ -2821,6 +3508,12 @@
 
         function showMateriMufradat() {
             showInlineMessage('📝 Membuka Materi 2: Contoh Mufradat!', 'success');
+            
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
             
             // Create detailed content for Materi 2
             const materiContent = `
@@ -3074,6 +3767,9 @@
                             <button class="prev-button" onclick="showMateriPengertian()">
                                 ← Materi 1: Pengertian
                             </button>
+                            <button class="prev-button" onclick="resetBabIsimTafdhil()">
+                                🏠 Kembali ke Bab 1
+                            </button>
                             <button class="next-button" onclick="showMateriKalimat()">
                                 Lanjut ke Materi 3: Contoh Kalimat →
                             </button>
@@ -3089,6 +3785,12 @@
 
         function showMateriKalimat() {
             showInlineMessage('💬 Membuka Materi 3: Contoh Kalimat!', 'success');
+            
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
             
             // Create detailed content for Materi 3
             const materiContent = `
@@ -3112,62 +3814,92 @@
                                 <h4>🏠 Contoh Kalimat Sehari-hari:</h4>
                                 
                                 <div class="sentence-group">
-                                    <h5>1️⃣ Membandingkan Ukuran (Size)</h5>
+                                    <h5>1️⃣ Menggunakan أَطْوَلُ (Lebih Panjang) & أَقْصَرُ (Lebih Pendek)</h5>
                                     <div class="sentence-card">
-                                        <div class="arabic-sentence">هَذَا البَيْتُ أَكْبَرُ مِنْ ذَلِكَ البَيْتِ</div>
-                                        <div class="sentence-meaning">Rumah ini lebih besar dari rumah itu</div>
+                                        <div class="arabic-sentence">هَذَا القَلَمُ أَطْوَلُ مِنْ ذَلِكَ القَلَمِ</div>
+                                        <div class="sentence-meaning">Pulpen ini lebih panjang dari pulpen itu</div>
                                         <button class="audio-btn" onclick="playAudio('sentence1')">🔊</button>
                                     </div>
                                     
                                     <div class="sentence-card">
-                                        <div class="arabic-sentence">القَلَمُ أَطْوَلُ مِنَ المِمْحَاةِ</div>
-                                        <div class="sentence-meaning">Pulpen lebih panjang dari penghapus</div>
+                                        <div class="arabic-sentence">المِسْطَرَةُ أَقْصَرُ مِنَ السَّبُّورَةِ</div>
+                                        <div class="sentence-meaning">Penggaris lebih pendek dari papan tulis</div>
                                         <button class="audio-btn" onclick="playAudio('sentence2')">🔊</button>
                                     </div>
                                 </div>
 
                                 <div class="sentence-group">
-                                    <h5>2️⃣ Membandingkan Jarak (Distance)</h5>
+                                    <h5>2️⃣ Menggunakan أَكْبَرُ (Lebih Besar) & أَصْغَرُ (Lebih Kecil)</h5>
                                     <div class="sentence-card">
-                                        <div class="arabic-sentence">المَسْجِدُ أَقْرَبُ مِنَ المَدْرَسَةِ</div>
-                                        <div class="sentence-meaning">Masjid lebih dekat dari sekolah</div>
+                                        <div class="arabic-sentence">هَذَا البَيْتُ أَكْبَرُ مِنْ ذَلِكَ البَيْتِ</div>
+                                        <div class="sentence-meaning">Rumah ini lebih besar dari rumah itu</div>
                                         <button class="audio-btn" onclick="playAudio('sentence3')">🔊</button>
                                     </div>
                                     
                                     <div class="sentence-card">
-                                        <div class="arabic-sentence">السُّوْقُ أَبْعَدُ مِنَ البَيْتِ</div>
-                                        <div class="sentence-meaning">Pasar lebih jauh dari rumah</div>
+                                        <div class="arabic-sentence">الكِتَابُ أَصْغَرُ مِنَ الحَقِيْبَةِ</div>
+                                        <div class="sentence-meaning">Buku lebih kecil dari tas</div>
                                         <button class="audio-btn" onclick="playAudio('sentence4')">🔊</button>
                                     </div>
                                 </div>
 
                                 <div class="sentence-group">
-                                    <h5>3️⃣ Membandingkan Kemudahan (Difficulty)</h5>
+                                    <h5>3️⃣ Menggunakan أَكْثَرُ (Lebih Banyak) & أَقَلُّ (Lebih Sedikit)</h5>
                                     <div class="sentence-card">
-                                        <div class="arabic-sentence">هَذَا الدَّرْسُ أَسْهَلُ مِنْ ذَلِكَ الدَّرْسِ</div>
-                                        <div class="sentence-meaning">Pelajaran ini lebih mudah dari pelajaran itu</div>
+                                        <div class="arabic-sentence">الطُّلَّابُ أَكْثَرُ مِنَ المُدَرِّسِيْنَ</div>
+                                        <div class="sentence-meaning">Siswa lebih banyak dari guru</div>
                                         <button class="audio-btn" onclick="playAudio('sentence5')">🔊</button>
                                     </div>
                                     
                                     <div class="sentence-card">
-                                        <div class="arabic-sentence">الرِّيَاضِيَّاتُ أَصْعَبُ مِنَ التَّارِيْخِ</div>
-                                        <div class="sentence-meaning">Matematika lebih sulit dari sejarah</div>
+                                        <div class="arabic-sentence">الأَقْلَامُ أَقَلُّ مِنَ الكُتُبِ</div>
+                                        <div class="sentence-meaning">Pulpen lebih sedikit dari buku</div>
                                         <button class="audio-btn" onclick="playAudio('sentence6')">🔊</button>
                                     </div>
                                 </div>
 
                                 <div class="sentence-group">
-                                    <h5>4️⃣ Membandingkan Jumlah (Quantity)</h5>
+                                    <h5>4️⃣ Menggunakan أَعْمَقُ (Lebih Dalam) & أَسْهَلُ (Lebih Mudah)</h5>
                                     <div class="sentence-card">
-                                        <div class="arabic-sentence">الطُّلَّابُ أَكْثَرُ مِنَ المُدَرِّسِيْنَ</div>
-                                        <div class="sentence-meaning">Siswa lebih banyak dari guru</div>
+                                        <div class="arabic-sentence">البَحْرُ أَعْمَقُ مِنَ النَّهْرِ</div>
+                                        <div class="sentence-meaning">Laut lebih dalam dari sungai</div>
                                         <button class="audio-btn" onclick="playAudio('sentence7')">🔊</button>
                                     </div>
                                     
                                     <div class="sentence-card">
-                                        <div class="arabic-sentence">الكُتُبُ أَقَلُّ مِنَ الأَقْلَامِ</div>
-                                        <div class="sentence-meaning">Buku lebih sedikit dari pulpen</div>
+                                        <div class="arabic-sentence">هَذَا الدَّرْسُ أَسْهَلُ مِنْ ذَلِكَ الدَّرْسِ</div>
+                                        <div class="sentence-meaning">Pelajaran ini lebih mudah dari pelajaran itu</div>
                                         <button class="audio-btn" onclick="playAudio('sentence8')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="sentence-group">
+                                    <h5>5️⃣ Menggunakan أَبْعَدُ (Lebih Jauh) & أَقْرَبُ (Lebih Dekat)</h5>
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">المَسْجِدُ أَقْرَبُ مِنَ المَدْرَسَةِ</div>
+                                        <div class="sentence-meaning">Masjid lebih dekat dari sekolah</div>
+                                        <button class="audio-btn" onclick="playAudio('sentence9')">🔊</button>
+                                    </div>
+                                    
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">السُّوْقُ أَبْعَدُ مِنَ البَيْتِ</div>
+                                        <div class="sentence-meaning">Pasar lebih jauh dari rumah</div>
+                                        <button class="audio-btn" onclick="playAudio('sentence10')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="sentence-group">
+                                    <h5>6️⃣ Menggunakan أَضْعَفُ (Lebih Lemah)</h5>
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">الطِّفْلُ أَضْعَفُ مِنَ الرَّجُلِ</div>
+                                        <div class="sentence-meaning">Anak kecil lebih lemah dari laki-laki dewasa</div>
+                                        <button class="audio-btn" onclick="playAudio('sentence11')">🔊</button>
+                                    </div>
+                                    
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">الوَرَقَةُ أَضْعَفُ مِنَ الحَدِيْدِ</div>
+                                        <div class="sentence-meaning">Kertas lebih lemah dari besi</div>
+                                        <button class="audio-btn" onclick="playAudio('sentence12')">🔊</button>
                                     </div>
                                 </div>
                             </div>
@@ -3192,17 +3924,17 @@
                                 <div class="analysis-example">
                                     <h5>💡 Contoh Analisis:</h5>
                                     <div class="breakdown-card">
-                                        <div class="arabic-sentence">هَذَا البَيْتُ أَكْبَرُ مِنْ ذَلِكَ البَيْتِ</div>
+                                        <div class="arabic-sentence">هَذَا القَلَمُ أَطْوَلُ مِنْ ذَلِكَ القَلَمِ</div>
                                         <div class="breakdown-parts">
                                             <div class="part-item">
-                                                <span class="part-arabic">هَذَا البَيْتُ</span>
+                                                <span class="part-arabic">هَذَا القَلَمُ</span>
                                                 <span class="part-function">Mubtada (Subjek)</span>
-                                                <span class="part-meaning">Rumah ini</span>
+                                                <span class="part-meaning">Pulpen ini</span>
                                             </div>
                                             <div class="part-item">
-                                                <span class="part-arabic">أَكْبَرُ</span>
+                                                <span class="part-arabic">أَطْوَلُ</span>
                                                 <span class="part-function">Isim Tafdhil (Khabar)</span>
-                                                <span class="part-meaning">lebih besar</span>
+                                                <span class="part-meaning">lebih panjang</span>
                                             </div>
                                             <div class="part-item">
                                                 <span class="part-arabic">مِنْ</span>
@@ -3210,9 +3942,9 @@
                                                 <span class="part-meaning">dari</span>
                                             </div>
                                             <div class="part-item">
-                                                <span class="part-arabic">ذَلِكَ البَيْتِ</span>
+                                                <span class="part-arabic">ذَلِكَ القَلَمِ</span>
                                                 <span class="part-function">Majrur</span>
-                                                <span class="part-meaning">rumah itu</span>
+                                                <span class="part-meaning">pulpen itu</span>
                                             </div>
                                         </div>
                                     </div>
@@ -3240,21 +3972,27 @@
                                     <h4>💡 Contoh Penggunaan لَكِنَّ:</h4>
                                     
                                     <div class="sentence-card">
-                                        <div class="arabic-sentence">هَذَا الكِتَابُ جَمِيْلٌ لَكِنَّ ذَلِكَ الكِتَابَ أَجْمَلُ</div>
-                                        <div class="sentence-meaning">Buku ini bagus, tetapi buku itu lebih bagus</div>
+                                        <div class="arabic-sentence">هَذَا القَلَمُ طَوِيْلٌ لَكِنَّ ذَلِكَ القَلَمَ أَطْوَلُ</div>
+                                        <div class="sentence-meaning">Pulpen ini panjang, tetapi pulpen itu lebih panjang</div>
                                         <button class="audio-btn" onclick="playAudio('lakin1')">🔊</button>
                                     </div>
                                     
                                     <div class="sentence-card">
-                                        <div class="arabic-sentence">المَدْرَسَةُ قَرِيْبَةٌ لَكِنَّ المَسْجِدَ أَقْرَبُ</div>
-                                        <div class="sentence-meaning">Sekolah dekat, tetapi masjid lebih dekat</div>
+                                        <div class="arabic-sentence">البَيْتُ كَبِيْرٌ لَكِنَّ المَدْرَسَةَ أَكْبَرُ</div>
+                                        <div class="sentence-meaning">Rumah besar, tetapi sekolah lebih besar</div>
                                         <button class="audio-btn" onclick="playAudio('lakin2')">🔊</button>
                                     </div>
                                     
                                     <div class="sentence-card">
-                                        <div class="arabic-sentence">الطَّعَامُ لَذِيْذٌ لَكِنَّ الحَلْوَى أَلَذُّ</div>
-                                        <div class="sentence-meaning">Makanan enak, tetapi kue lebih enak</div>
+                                        <div class="arabic-sentence">المَسْجِدُ قَرِيْبٌ لَكِنَّ المَدْرَسَةَ أَقْرَبُ</div>
+                                        <div class="sentence-meaning">Masjid dekat, tetapi sekolah lebih dekat</div>
                                         <button class="audio-btn" onclick="playAudio('lakin3')">🔊</button>
+                                    </div>
+                                    
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">الكِتَابُ صَغِيْرٌ لَكِنَّ القَلَمَ أَصْغَرُ</div>
+                                        <div class="sentence-meaning">Buku kecil, tetapi pulpen lebih kecil</div>
+                                        <button class="audio-btn" onclick="playAudio('lakin4')">🔊</button>
                                     </div>
                                 </div>
                                 
@@ -3275,7 +4013,7 @@
                                 <h4>👥 Percakapan tentang Perbandingan Fisik:</h4>
                                 <div class="dialog-container">
                                     <div class="dialog-line speaker-a">
-                                        <div class="speaker-name">أَحْمَد:</div>
+                                        <div class="speaker-name">حَسَن:</div>
                                         <div class="dialog-content">
                                             <div class="arabic-text">اُنْظُرْ يَا خَالِدُ! جِسْمُكَ كَبِيرٌ جِدًّا</div>
                                             <div class="meaning">Lihat ya Khalid! Tubuhmu besar sekali</div>
@@ -3293,7 +4031,7 @@
                                     </div>
                                     
                                     <div class="dialog-line speaker-a">
-                                        <div class="speaker-name">أَحْمَد:</div>
+                                        <div class="speaker-name">حَسَن:</div>
                                         <div class="dialog-content">
                                             <div class="arabic-text">أَيُّهُمَا أَقْوَى؟ جِسْمُكَ أَوْ جِسْمُ أَبِيكَ؟</div>
                                             <div class="meaning">Mana yang lebih kuat? Tubuhmu atau tubuh ayahmu?</div>
@@ -3365,6 +4103,9 @@
                             <button class="prev-button" onclick="showMateriMufradat()">
                                 ← Materi 2: Contoh Mufradat
                             </button>
+                            <button class="prev-button" onclick="resetBabIsimTafdhil()">
+                                🏠 Kembali ke Bab 1
+                            </button>
                             <button class="next-button" onclick="showMateriLatihan()">
                                 Lanjut ke Materi 4: Latihan & Kuis →
                             </button>
@@ -3380,15 +4121,692 @@
 
         function showMateriLatihan() {
             showInlineMessage('🎯 Membuka Materi 4: Latihan & Kuis!', 'success');
-            // Placeholder for Materi 4 content
+            
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            
+            // Create detailed content for Materi 4
+            const materiContent = `
+                <div class="materi-content-detail">
+                    <div class="back-navigation">
+                        <button class="back-button" onclick="resetBabIsimTafdhil()">
+                            ← Kembali ke Bab 1
+                        </button>
+                    </div>
+                    
+                    <h2 class="section-title" style="color: #00A9B5 !important;">🎯 Materi 4: Latihan & Kuis</h2>
+                    <div class="arabic-greeting" style="text-align: center; margin-bottom: 30px;">التَّدْرِيْبَاتُ وَالاِخْتِبَارُ</div>
+                    
+                    <!-- Quiz Section 1: Materi 1 - Pengertian & Ciri-ciri -->
+                    <div class="materi-card">
+                        <div class="materi-header">
+                            <h3>📖 Kuis Materi 1: Pengertian & Ciri-ciri</h3>
+                            <p>Uji pemahamanmu tentang pengertian dan ciri-ciri Isim Tafdhil dengan 5 soal pilihan ganda</p>
+                        </div>
+                        <div class="materi-body">
+                            <div class="quiz-container" id="quiz1-container">
+                                <div class="quiz-question" data-question="1" data-quiz="1">
+                                    <div class="question-header">
+                                        <span class="question-number">1</span>
+                                        <h4>Apa pengertian Isim Tafdhil?</h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text">Kata yang menunjukkan waktu</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text">Kata yang memiliki makna "lebih" atau "paling"</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text">Kata yang menunjukkan tempat</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text">Kata yang menunjukkan jumlah</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="2" data-quiz="1" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">2</span>
+                                        <h4>Pola dasar Isim Tafdhil adalah:</h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text"><span class="arabic-text" style="font-size: 24px;">فَعَلَ</span></span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text"><span class="arabic-text" style="font-size: 24px;">أَفْعَلُ</span></span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text"><span class="arabic-text" style="font-size: 24px;">فَاعِلٌ</span></span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text"><span class="arabic-text" style="font-size: 24px;">مَفْعُولٌ</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="3" data-quiz="1" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">3</span>
+                                        <h4>Apakah Isim Tafdhil dengan pola أَفْعَلُ menggunakan tanwin?</h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text">Tidak pernah menggunakan tanwin</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text">Selalu menggunakan tanwin</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text">Kadang-kadang menggunakan tanwin</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text">Tergantung pada konteks kalimat</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="4" data-quiz="1" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">4</span>
+                                        <h4>Apakah Isim Tafdhil terikat dengan jenis (mudzakkar/muannats) isim yang disifati?</h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text">Tidak terikat dengan jenis isim</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text">Selalu terikat dengan jenis isim</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text">Hanya terikat untuk muannats</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text">Hanya terikat untuk mudzakkar</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="5" data-quiz="1" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">5</span>
+                                        <h4>Manakah penulisan yang benar untuk kata "lebih besar"?</h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text"><span class="arabic-text" style="font-size: 24px;">أَكْبَرٌ</span></span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text"><span class="arabic-text" style="font-size: 24px;">أَكْبَرُ</span></span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text"><span class="arabic-text" style="font-size: 24px;">أَكْبَرِ</span></span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text"><span class="arabic-text" style="font-size: 24px;">أَكْبَرَ</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-result" id="quiz1-result" style="display: none;">
+                                    <h4>🎉 Hasil Kuis Materi 1</h4>
+                                    <div class="score-display">
+                                        <span class="score-text">Skor Anda: </span>
+                                        <span class="score-number" id="quiz1-score">0</span>
+                                        <span class="score-total">/5</span>
+                                    </div>
+                                    <div class="score-message" id="quiz1-message"></div>
+                                    <button class="next-button" onclick="startQuiz2()">Lanjut ke Kuis Materi 2 →</button>
+                                </div>
+
+                                <div class="quiz-navigation">
+                                    <button class="prev-button" id="quiz1-prev" onclick="prevQuestion(1)" style="display: none;">← Soal Sebelumnya</button>
+                                    <button class="next-button" id="quiz1-next" onclick="nextQuestion(1)">Soal Selanjutnya →</button>
+                                    <button class="next-button" id="quiz1-finish" onclick="finishQuiz(1)" style="display: none;">Selesai Kuis</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Section 2: Materi 2 - Drag and Drop Mufradat -->
+                    <div class="materi-card" id="quiz2-section" style="display: none;">
+                        <div class="materi-header">
+                            <h3>📝 Kuis Materi 2: Drag & Drop Mufradat</h3>
+                            <p>Cocokkan kata dasar dengan bentuk Isim Tafdhil-nya dengan cara drag and drop</p>
+                        </div>
+                        <div class="materi-body">
+                            <div class="drag-drop-container">
+                                <div class="drag-drop-instruction">
+                                    <p>🎯 <strong>Petunjuk:</strong> Seret kata dari kolom kiri ke pasangan yang tepat di kolom kanan</p>
+                                </div>
+                                
+                                <div class="drag-drop-game" id="dragDropGame">
+                                    <div class="drag-column">
+                                        <h4>Bahasa Arab</h4>
+                                        <div class="draggable-items">
+                                            <div class="draggable-item" draggable="true" data-answer="lebih-panjang">
+                                                <span class="arabic-text" style="font-size: 28px;">أَطْوَلُ</span>
+                                            </div>
+                                            <div class="draggable-item" draggable="true" data-answer="lebih-besar">
+                                                <span class="arabic-text" style="font-size: 28px;">أَكْبَرُ</span>
+                                            </div>
+                                            <div class="draggable-item" draggable="true" data-answer="lebih-pendek">
+                                                <span class="arabic-text" style="font-size: 28px;">أَقْصَرُ</span>
+                                            </div>
+                                            <div class="draggable-item" draggable="true" data-answer="lebih-kecil">
+                                                <span class="arabic-text" style="font-size: 28px;">أَصْغَرُ</span>
+                                            </div>
+                                            <div class="draggable-item" draggable="true" data-answer="lebih-banyak">
+                                                <span class="arabic-text" style="font-size: 28px;">أَكْثَرُ</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="drop-column">
+                                        <h4>Arti dalam Bahasa Indonesia</h4>
+                                        <div class="drop-zones">
+                                            <div class="drop-zone" data-target="lebih-panjang">
+                                                <span class="meaning" style="font-size: 18px; font-weight: 700;">lebih panjang</span>
+                                                <div class="drop-indicator">Letakkan di sini</div>
+                                            </div>
+                                            <div class="drop-zone" data-target="lebih-besar">
+                                                <span class="meaning" style="font-size: 18px; font-weight: 700;">lebih besar</span>
+                                                <div class="drop-indicator">Letakkan di sini</div>
+                                            </div>
+                                            <div class="drop-zone" data-target="lebih-pendek">
+                                                <span class="meaning" style="font-size: 18px; font-weight: 700;">lebih pendek</span>
+                                                <div class="drop-indicator">Letakkan di sini</div>
+                                            </div>
+                                            <div class="drop-zone" data-target="lebih-kecil">
+                                                <span class="meaning" style="font-size: 18px; font-weight: 700;">lebih kecil</span>
+                                                <div class="drop-indicator">Letakkan di sini</div>
+                                            </div>
+                                            <div class="drop-zone" data-target="lebih-banyak">
+                                                <span class="meaning" style="font-size: 18px; font-weight: 700;">lebih banyak</span>
+                                                <div class="drop-indicator">Letakkan di sini</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="drag-drop-controls">
+                                    <button class="prev-button" onclick="resetDragDrop()">🔄 Reset</button>
+                                    <button class="next-button" onclick="checkDragDrop()">✅ Periksa Jawaban</button>
+                                </div>
+
+                                <div class="quiz-result" id="quiz2-result" style="display: none;">
+                                    <h4>🎉 Hasil Kuis Materi 2</h4>
+                                    <div class="score-display">
+                                        <span class="score-text">Skor Anda: </span>
+                                        <span class="score-number" id="quiz2-score">0</span>
+                                        <span class="score-total">/5</span>
+                                    </div>
+                                    <div class="score-message" id="quiz2-message"></div>
+                                    <button class="next-button" onclick="startQuiz3()">Lanjut ke Kuis Materi 3 →</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Section 3: Materi 3 - Kalimat -->
+                    <div class="materi-card" id="quiz3-section" style="display: none;">
+                        <div class="materi-header">
+                            <h3>💬 Kuis Materi 3: Contoh Kalimat</h3>
+                            <p>Uji pemahamanmu tentang penggunaan Isim Tafdhil dalam kalimat dengan 10 soal pilihan ganda</p>
+                        </div>
+                        <div class="materi-body">
+                            <div class="quiz-container" id="quiz3-container">
+                                <div class="quiz-question" data-question="1" data-quiz="3">
+                                    <div class="question-header">
+                                        <span class="question-number">1</span>
+                                        <h4>Apa arti kalimat: <span class="arabic-text">هَذَا القَلَمُ أَطْوَلُ مِنْ ذَلِكَ القَلَمِ</span></h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text">Pulpen ini lebih panjang dari pulpen itu</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text">Pulpen ini lebih pendek dari pulpen itu</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text">Pulpen ini sama panjang dengan pulpen itu</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text">Pulpen ini lebih besar dari pulpen itu</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="2" data-quiz="3" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">2</span>
+                                        <h4>Kata <span class="arabic-text">مِنْ</span> dalam kalimat Isim Tafdhil berfungsi untuk:</h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text">Menunjukkan waktu</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text">Menunjukkan perbandingan</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text">Menunjukkan tempat</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text">Menunjukkan sebab</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="3" data-quiz="3" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">3</span>
+                                        <h4>Bagaimana cara mengatakan "Rumah ini lebih besar dari rumah itu" dalam bahasa Arab?</h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text"><span class="arabic-text">هَذَا البَيْتُ أَكْبَرُ مِنْ ذَلِكَ البَيْتِ</span></span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text"><span class="arabic-text">هَذَا البَيْتُ أَصْغَرُ مِنْ ذَلِكَ البَيْتِ</span></span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text"><span class="arabic-text">هَذَا البَيْتُ كَبِيْرٌ مِنْ ذَلِكَ البَيْتِ</span></span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text"><span class="arabic-text">هَذَا البَيْتُ أَكْبَرٌ مِنْ ذَلِكَ البَيْتِ</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="4" data-quiz="3" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">4</span>
+                                        <h4>Apa fungsi <span class="arabic-text">لَكِنَّ</span> dalam kalimat Isim Tafdhil?</h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text">Menunjukkan persamaan</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text">Menunjukkan kontras atau perbedaan</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text">Menunjukkan sebab akibat</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text">Menunjukkan waktu</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="5" data-quiz="3" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">5</span>
+                                        <h4>Apa arti kalimat: <span class="arabic-text">هَذَا الدَّرْسُ أَسْهَلُ مِنْ ذَلِكَ الدَّرْسِ</span></h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text">Pelajaran ini lebih sulit dari pelajaran itu</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text">Pelajaran ini lebih mudah dari pelajaran itu</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text">Pelajaran ini sama mudahnya dengan pelajaran itu</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text">Pelajaran ini lebih panjang dari pelajaran itu</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="6" data-quiz="3" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">6</span>
+                                        <h4>Apa arti kalimat: <span class="arabic-text">المَسْجِدُ أَقْرَبُ مِنَ المَدْرَسَةِ</span></h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text">Masjid lebih jauh dari sekolah</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text">Masjid lebih dekat dari sekolah</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text">Masjid sama jaraknya dengan sekolah</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text">Masjid lebih besar dari sekolah</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="7" data-quiz="3" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">7</span>
+                                        <h4>Apa arti kalimat: <span class="arabic-text">السُّوْقُ أَبْعَدُ مِنَ البَيْتِ</span></h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text">Pasar lebih dekat dari rumah</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text">Pasar lebih jauh dari rumah</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text">Pasar sama jaraknya dengan rumah</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text">Pasar lebih besar dari rumah</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="8" data-quiz="3" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">8</span>
+                                        <h4>Bagaimana cara mengatakan "Buku kecil, tetapi pulpen lebih kecil" dalam bahasa Arab?</h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text"><span class="arabic-text">الكِتَابُ صَغِيْرٌ لَكِنَّ القَلَمَ أَصْغَرُ</span></span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text"><span class="arabic-text">الكِتَابُ أَصْغَرُ لَكِنَّ القَلَمَ صَغِيْرٌ</span></span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text"><span class="arabic-text">الكِتَابُ صَغِيْرٌ وَالقَلَمَ أَصْغَرُ</span></span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text"><span class="arabic-text">الكِتَابُ صَغِيْرٌ لَكِنَّ القَلَمَ أَصْغَرٌ</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="9" data-quiz="3" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">9</span>
+                                        <h4>Apa arti kalimat: <span class="arabic-text">الطُّلَّابُ أَكْثَرُ مِنَ المُدَرِّسِيْنَ</span></h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text">Siswa lebih sedikit dari guru</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text">Siswa lebih banyak dari guru</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text">Siswa sama banyaknya dengan guru</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text">Siswa lebih pintar dari guru</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question" data-question="10" data-quiz="3" style="display: none;">
+                                    <div class="question-header">
+                                        <span class="question-number">10</span>
+                                        <h4>Apa arti kalimat: <span class="arabic-text">الطِّفْلُ أَضْعَفُ مِنَ الرَّجُلِ</span></h4>
+                                    </div>
+                                    <div class="options-container">
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">A</span>
+                                            <span class="option-text">Anak kecil lebih kuat dari laki-laki dewasa</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, true)">
+                                            <span class="option-letter">B</span>
+                                            <span class="option-text">Anak kecil lebih lemah dari laki-laki dewasa</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">C</span>
+                                            <span class="option-text">Anak kecil sama kuatnya dengan laki-laki dewasa</span>
+                                        </div>
+                                        <div class="option" onclick="selectOption(this, false)">
+                                            <span class="option-letter">D</span>
+                                            <span class="option-text">Anak kecil lebih besar dari laki-laki dewasa</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-result" id="quiz3-result" style="display: none;">
+                                    <h4>🎉 Hasil Kuis Materi 3</h4>
+                                    <div class="score-display">
+                                        <span class="score-text">Skor Anda: </span>
+                                        <span class="score-number" id="quiz3-score">0</span>
+                                        <span class="score-total">/10</span>
+                                    </div>
+                                    <div class="score-message" id="quiz3-message"></div>
+                                    <button class="next-button" onclick="showFinalResult()">Lihat Hasil Akhir →</button>
+                                </div>
+
+                                <div class="quiz-navigation">
+                                    <button class="prev-button" id="quiz3-prev" onclick="prevQuestion(3)" style="display: none;">← Soal Sebelumnya</button>
+                                    <button class="next-button" id="quiz3-next" onclick="nextQuestion(3)">Soal Selanjutnya →</button>
+                                    <button class="next-button" id="quiz3-finish" onclick="finishQuiz(3)" style="display: none;">Selesai Kuis</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Result Section -->
+                    <div class="materi-card" id="final-result-section" style="display: none;">
+                        <div class="materi-header">
+                            <h3>🏆 Hasil Akhir Semua Kuis</h3>
+                            <p>Selamat! Anda telah menyelesaikan semua kuis Bab 1: Isim Tafdhil</p>
+                        </div>
+                        <div class="materi-body">
+                            <div class="final-score-container">
+                                <div class="final-score-card">
+                                    <h4>📊 Ringkasan Nilai</h4>
+                                    <div class="score-breakdown">
+                                        <div class="score-item">
+                                            <span class="score-label">Kuis Materi 1 (Pengertian):</span>
+                                            <span class="score-value" id="final-quiz1">0/5</span>
+                                        </div>
+                                        <div class="score-item">
+                                            <span class="score-label">Kuis Materi 2 (Mufradat):</span>
+                                            <span class="score-value" id="final-quiz2">0/5</span>
+                                        </div>
+                                        <div class="score-item">
+                                            <span class="score-label">Kuis Materi 3 (Kalimat):</span>
+                                            <span class="score-value" id="final-quiz3">0/10</span>
+                                        </div>
+                                        <div class="score-total-line">
+                                            <span class="score-label"><strong>Total Skor:</strong></span>
+                                            <span class="score-value" id="final-total"><strong>0/20</strong></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="achievement-badge" id="achievement-badge">
+                                        <div class="badge-icon">🏆</div>
+                                        <div class="badge-text" id="badge-text">Pemula</div>
+                                        <div class="badge-description" id="badge-description">Terus belajar!</div>
+                                    </div>
+                                </div>
+
+                                <div class="learning-recommendation">
+                                    <h4>💡 Rekomendasi Belajar</h4>
+                                    <div id="recommendation-text">
+                                        <p>Berdasarkan hasil kuis Anda, berikut adalah rekomendasi untuk meningkatkan pemahaman:</p>
+                                        <ul id="recommendation-list">
+                                            <li>Ulangi materi yang masih kurang dipahami</li>
+                                            <li>Latihan lebih banyak contoh kalimat</li>
+                                            <li>Hafalkan kosakata Isim Tafdhil</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-section">
+                        <h3>🎯 Progress Belajar</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                        <p class="progress-text">Materi 4 dari 4 selesai (100%)</p>
+                        <div class="navigation-buttons">
+                            <button class="prev-button" onclick="showMateriKalimat()">
+                                ← Materi 3: Contoh Kalimat
+                            </button>
+                            <button class="prev-button" onclick="resetBabIsimTafdhil()">
+                                🏠 Kembali ke Bab 1
+                            </button>
+                            <button class="next-button" onclick="showSection('peta')" style="background: linear-gradient(135deg, #28a745, #20c997);">
+                                🎉 Selesai! Kembali ke Timeline →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Replace the current section content
+            const babSection = document.getElementById('bab-isim-tafdhil');
+            babSection.innerHTML = materiContent;
+            
+            // Initialize quiz functionality
+            initializeQuizzes();
         }
 
         function playAudio(wordId) {
-            // Placeholder for audio functionality
-            showInlineMessage(`🔊 Memutar audio untuk: ${wordId}`, 'info');
+            // Audio URLs mapping for vocabulary
+            const audioUrls = {
+                'atwalu': 'https://drive.google.com/uc?export=download&id=1zwOzOBr9JWoSFQvhK2T0ZmfsxK4rcSWI',
+                'aqsaru': 'https://drive.google.com/uc?export=download&id=1VNR-AGF6D0sCcjAL-p7Uf7Hnkz4rK-kM',
+                'akbaru': 'https://drive.google.com/uc?export=download&id=1K65eANVNWwft-LaXj7ugzP46Slp3y84w',
+                'asgharu': 'https://drive.google.com/uc?export=download&id=18fF_LieFK6U-rHMuSSkszxX0reVi8UZ_',
+                'aktsaru': 'https://drive.google.com/uc?export=download&id=1PGBBF16_6I3cBFAAztTukowe7KKkTuW9',
+                'a3maqu': 'https://drive.google.com/uc?export=download&id=16mLxKjpy3E459RD3Hj-eAJ-WlIZo4SJF',
+                'ashalu': 'https://drive.google.com/uc?export=download&id=1hVUkREjO-SJvC9LtH7GM0ek-i3nfjyxy',
+                'ab3adu': 'https://drive.google.com/uc?export=download&id=1gnFddxkMDe1HohB8UW3jwrdSXIQ5pymH',
+                'aqrabu': 'https://drive.google.com/uc?export=download&id=1yF6ykzYPu-rNIRRv_1LsOTMlxxWqJHJ9',
+                'ad3afu': 'https://drive.google.com/uc?export=download&id=1UcHebzuupkxGqLFb_T_TNJWXexbXDypi'
+            };
+            
+            const audioUrl = audioUrls[wordId];
+            
+            if (audioUrl) {
+                try {
+                    // Create audio element
+                    const audio = new Audio(audioUrl);
+                    
+                    // Set audio properties
+                    audio.volume = 0.8;
+                    audio.preload = 'auto';
+                    
+                    // Play audio with error handling
+                    audio.play().then(() => {
+                        showInlineMessage(`🔊 Memutar audio: ${getArabicWord(wordId)}`, 'success');
+                    }).catch(error => {
+                        console.error('Audio playback failed:', error);
+                        showInlineMessage(`⚠️ Gagal memutar audio. Coba lagi dalam beberapa saat.`, 'warning');
+                    });
+                    
+                    // Handle audio events
+                    audio.addEventListener('ended', () => {
+                        showInlineMessage(`✅ Audio selesai diputar`, 'info');
+                    });
+                    
+                    audio.addEventListener('error', (e) => {
+                        console.error('Audio error:', e);
+                        showInlineMessage(`❌ Error saat memutar audio. Periksa koneksi internet Anda.`, 'warning');
+                    });
+                    
+                } catch (error) {
+                    console.error('Error creating audio:', error);
+                    showInlineMessage(`❌ Tidak dapat memutar audio. Browser mungkin tidak mendukung format ini.`, 'warning');
+                }
+            } else {
+                showInlineMessage(`🔊 Audio untuk ${wordId} belum tersedia`, 'info');
+            }
+        }
+        
+        function getArabicWord(wordId) {
+            const arabicWords = {
+                'atwalu': 'أَطْوَلُ',
+                'aqsaru': 'أَقْصَرُ', 
+                'akbaru': 'أَكْبَرُ',
+                'asgharu': 'أَصْغَرُ',
+                'aktsaru': 'أَكْثَرُ',
+                'a3maqu': 'أَعْمَقُ',
+                'ashalu': 'أَسْهَلُ',
+                'ab3adu': 'أَبْعَدُ',
+                'aqrabu': 'أَقْرَبُ',
+                'ad3afu': 'أَضْعَفُ'
+            };
+            return arabicWords[wordId] || wordId;
         }
 
         function resetBabIsimTafdhil() {
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            
             // Reset the bab content to original state
             const babSection = document.getElementById('bab-isim-tafdhil');
             const originalContent = `
@@ -3591,6 +5009,380 @@
             }, 4000);
         }
 
+        // Quiz functionality
+        let quizScores = {
+            quiz1: 0,
+            quiz2: 0,
+            quiz3: 0
+        };
+
+        let currentQuestions = {
+            quiz1: 1,
+            quiz3: 1
+        };
+
+        let selectedAnswers = {
+            quiz1: {},
+            quiz3: {}
+        };
+
+        function initializeQuizzes() {
+            // Initialize drag and drop functionality
+            initializeDragDrop();
+            
+            // Reset all quiz states
+            quizScores = { quiz1: 0, quiz2: 0, quiz3: 0 };
+            currentQuestions = { quiz1: 1, quiz3: 1 };
+            selectedAnswers = { quiz1: {}, quiz3: {} };
+        }
+
+        function selectOption(optionElement, isCorrect) {
+            const question = optionElement.closest('.quiz-question');
+            const questionNum = question.dataset.question;
+            const quizNum = question.dataset.quiz;
+            
+            // Remove previous selections
+            const allOptions = question.querySelectorAll('.option');
+            allOptions.forEach(opt => opt.classList.remove('selected'));
+            
+            // Mark current selection
+            optionElement.classList.add('selected');
+            
+            // Store answer
+            selectedAnswers[`quiz${quizNum}`][questionNum] = isCorrect;
+            
+            // Show feedback immediately
+            setTimeout(() => {
+                allOptions.forEach(opt => {
+                    const isOptionCorrect = opt.onclick.toString().includes('true');
+                    if (isOptionCorrect) {
+                        opt.classList.add('correct');
+                    } else if (opt.classList.contains('selected') && !isCorrect) {
+                        opt.classList.add('incorrect');
+                    }
+                });
+            }, 500);
+        }
+
+        function nextQuestion(quizNum) {
+            const currentQ = currentQuestions[`quiz${quizNum}`];
+            const totalQuestions = quizNum === 1 ? 5 : 10;
+            
+            if (currentQ < totalQuestions) {
+                // Hide current question
+                document.querySelector(`[data-question="${currentQ}"][data-quiz="${quizNum}"]`).style.display = 'none';
+                
+                // Show next question
+                currentQuestions[`quiz${quizNum}`]++;
+                document.querySelector(`[data-question="${currentQuestions[`quiz${quizNum}`]}"][data-quiz="${quizNum}"]`).style.display = 'block';
+                
+                // Update navigation buttons
+                updateNavigationButtons(quizNum);
+            }
+        }
+
+        function prevQuestion(quizNum) {
+            const currentQ = currentQuestions[`quiz${quizNum}`];
+            
+            if (currentQ > 1) {
+                // Hide current question
+                document.querySelector(`[data-question="${currentQ}"][data-quiz="${quizNum}"]`).style.display = 'none';
+                
+                // Show previous question
+                currentQuestions[`quiz${quizNum}`]--;
+                document.querySelector(`[data-question="${currentQuestions[`quiz${quizNum}`]}"][data-quiz="${quizNum}"]`).style.display = 'block';
+                
+                // Update navigation buttons
+                updateNavigationButtons(quizNum);
+            }
+        }
+
+        function updateNavigationButtons(quizNum) {
+            const currentQ = currentQuestions[`quiz${quizNum}`];
+            const totalQuestions = quizNum === 1 ? 5 : 10;
+            
+            const prevBtn = document.getElementById(`quiz${quizNum}-prev`);
+            const nextBtn = document.getElementById(`quiz${quizNum}-next`);
+            const finishBtn = document.getElementById(`quiz${quizNum}-finish`);
+            
+            // Show/hide previous button
+            prevBtn.style.display = currentQ > 1 ? 'inline-block' : 'none';
+            
+            // Show/hide next and finish buttons
+            if (currentQ < totalQuestions) {
+                nextBtn.style.display = 'inline-block';
+                finishBtn.style.display = 'none';
+            } else {
+                nextBtn.style.display = 'none';
+                finishBtn.style.display = 'inline-block';
+            }
+        }
+
+        function finishQuiz(quizNum) {
+            // Calculate score
+            const answers = selectedAnswers[`quiz${quizNum}`];
+            let score = 0;
+            
+            Object.values(answers).forEach(isCorrect => {
+                if (isCorrect) score++;
+            });
+            
+            quizScores[`quiz${quizNum}`] = score;
+            
+            // Hide all questions and navigation
+            const questions = document.querySelectorAll(`[data-quiz="${quizNum}"]`);
+            questions.forEach(q => q.style.display = 'none');
+            
+            document.querySelector(`#quiz${quizNum}-container .quiz-navigation`).style.display = 'none';
+            
+            // Show result
+            const resultDiv = document.getElementById(`quiz${quizNum}-result`);
+            const scoreSpan = document.getElementById(`quiz${quizNum}-score`);
+            const messageDiv = document.getElementById(`quiz${quizNum}-message`);
+            
+            scoreSpan.textContent = score;
+            
+            const totalQuestions = quizNum === 1 ? 5 : 10;
+            const percentage = (score / totalQuestions) * 100;
+            
+            let message = '';
+            if (percentage >= 80) {
+                message = '🎉 Luar biasa! Anda sangat memahami materi ini!';
+            } else if (percentage >= 60) {
+                message = '👍 Bagus! Anda cukup memahami materi ini.';
+            } else if (percentage >= 40) {
+                message = '📚 Tidak buruk, tapi masih perlu belajar lebih giat.';
+            } else {
+                message = '💪 Jangan menyerah! Ulangi materi dan coba lagi.';
+            }
+            
+            messageDiv.textContent = message;
+            resultDiv.style.display = 'block';
+            
+            showInlineMessage(`🎯 Kuis Materi ${quizNum} selesai! Skor: ${score}/${totalQuestions}`, 'success');
+        }
+
+        function startQuiz2() {
+            document.getElementById('quiz2-section').style.display = 'block';
+            showInlineMessage('🎮 Memulai Kuis Drag & Drop Materi 2!', 'info');
+        }
+
+        function startQuiz3() {
+            document.getElementById('quiz3-section').style.display = 'block';
+            showInlineMessage('📝 Memulai Kuis Materi 3!', 'info');
+        }
+
+        // Drag and Drop functionality
+        let dragDropAnswers = {};
+
+        function initializeDragDrop() {
+            const draggableItems = document.querySelectorAll('.draggable-item');
+            const dropZones = document.querySelectorAll('.drop-zone');
+            
+            draggableItems.forEach(item => {
+                item.addEventListener('dragstart', handleDragStart);
+                item.addEventListener('dragend', handleDragEnd);
+            });
+            
+            dropZones.forEach(zone => {
+                zone.addEventListener('dragover', handleDragOver);
+                zone.addEventListener('dragenter', handleDragEnter);
+                zone.addEventListener('dragleave', handleDragLeave);
+                zone.addEventListener('drop', handleDrop);
+            });
+        }
+
+        function handleDragStart(e) {
+            e.dataTransfer.setData('text/plain', e.target.dataset.answer);
+            e.target.classList.add('dragging');
+        }
+
+        function handleDragEnd(e) {
+            e.target.classList.remove('dragging');
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+        }
+
+        function handleDragEnter(e) {
+            e.preventDefault();
+            e.target.classList.add('drag-over');
+        }
+
+        function handleDragLeave(e) {
+            e.target.classList.remove('drag-over');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            const draggedAnswer = e.dataTransfer.getData('text/plain');
+            const dropTarget = e.target.closest('.drop-zone').dataset.target;
+            
+            e.target.classList.remove('drag-over');
+            
+            // Find the dragged item
+            const draggedItem = document.querySelector(`[data-answer="${draggedAnswer}"]`);
+            
+            // Remove item from previous location if any
+            Object.keys(dragDropAnswers).forEach(key => {
+                if (dragDropAnswers[key] === draggedAnswer) {
+                    delete dragDropAnswers[key];
+                    const prevZone = document.querySelector(`[data-target="${key}"]`);
+                    if (prevZone) {
+                        prevZone.classList.remove('filled');
+                        const prevItem = prevZone.querySelector('.draggable-item');
+                        if (prevItem) {
+                            document.querySelector('.draggable-items').appendChild(prevItem);
+                        }
+                    }
+                }
+            });
+            
+            // Place item in new location
+            dragDropAnswers[dropTarget] = draggedAnswer;
+            const targetZone = document.querySelector(`[data-target="${dropTarget}"]`);
+            targetZone.classList.add('filled');
+            targetZone.appendChild(draggedItem);
+            
+            showInlineMessage('✅ Item berhasil dipindahkan!', 'success');
+        }
+
+        function resetDragDrop() {
+            // Reset all answers
+            dragDropAnswers = {};
+            
+            // Move all items back to original container
+            const draggableItems = document.querySelectorAll('.draggable-item');
+            const originalContainer = document.querySelector('.draggable-items');
+            
+            draggableItems.forEach(item => {
+                originalContainer.appendChild(item);
+            });
+            
+            // Reset drop zone states
+            const dropZones = document.querySelectorAll('.drop-zone');
+            dropZones.forEach(zone => {
+                zone.classList.remove('filled', 'correct', 'incorrect');
+            });
+            
+            // Hide result
+            document.getElementById('quiz2-result').style.display = 'none';
+            
+            showInlineMessage('🔄 Drag & Drop telah direset!', 'info');
+        }
+
+        function checkDragDrop() {
+            let score = 0;
+            const totalItems = 5;
+            
+            // Check each answer
+            Object.keys(dragDropAnswers).forEach(target => {
+                const answer = dragDropAnswers[target];
+                const zone = document.querySelector(`[data-target="${target}"]`);
+                
+                if (target === answer) {
+                    zone.classList.add('correct');
+                    score++;
+                } else {
+                    zone.classList.add('incorrect');
+                }
+            });
+            
+            // Store score
+            quizScores.quiz2 = score;
+            
+            // Show result
+            const resultDiv = document.getElementById('quiz2-result');
+            const scoreSpan = document.getElementById('quiz2-score');
+            const messageDiv = document.getElementById('quiz2-message');
+            
+            scoreSpan.textContent = score;
+            
+            const percentage = (score / totalItems) * 100;
+            let message = '';
+            
+            if (percentage >= 80) {
+                message = '🎉 Sempurna! Anda menguasai kosakata Isim Tafdhil!';
+            } else if (percentage >= 60) {
+                message = '👍 Bagus! Anda memahami sebagian besar kosakata.';
+            } else if (percentage >= 40) {
+                message = '📚 Cukup baik, tapi perlu lebih banyak latihan.';
+            } else {
+                message = '💪 Jangan menyerah! Ulangi materi kosakata lagi.';
+            }
+            
+            messageDiv.textContent = message;
+            resultDiv.style.display = 'block';
+            
+            showInlineMessage(`🎯 Kuis Drag & Drop selesai! Skor: ${score}/${totalItems}`, 'success');
+        }
+
+        function showFinalResult() {
+            // Hide quiz 3 section
+            document.getElementById('quiz3-section').style.display = 'none';
+            
+            // Show final result section
+            document.getElementById('final-result-section').style.display = 'block';
+            
+            // Update final scores
+            document.getElementById('final-quiz1').textContent = `${quizScores.quiz1}/5`;
+            document.getElementById('final-quiz2').textContent = `${quizScores.quiz2}/5`;
+            document.getElementById('final-quiz3').textContent = `${quizScores.quiz3}/10`;
+            
+            const totalScore = quizScores.quiz1 + quizScores.quiz2 + quizScores.quiz3;
+            document.getElementById('final-total').textContent = `${totalScore}/20`;
+            
+            // Calculate percentage and set badge
+            const percentage = (totalScore / 20) * 100;
+            const badgeIcon = document.getElementById('achievement-badge').querySelector('.badge-icon');
+            const badgeText = document.getElementById('badge-text');
+            const badgeDescription = document.getElementById('badge-description');
+            
+            if (percentage >= 90) {
+                badgeIcon.textContent = '🏆';
+                badgeText.textContent = 'Master Isim Tafdhil';
+                badgeDescription.textContent = 'Luar biasa! Anda menguasai materi dengan sempurna!';
+            } else if (percentage >= 80) {
+                badgeIcon.textContent = '🥇';
+                badgeText.textContent = 'Ahli Perbandingan';
+                badgeDescription.textContent = 'Sangat bagus! Anda memahami materi dengan baik!';
+            } else if (percentage >= 70) {
+                badgeIcon.textContent = '🥈';
+                badgeText.textContent = 'Pelajar Rajin';
+                badgeDescription.textContent = 'Bagus! Terus tingkatkan pemahaman Anda!';
+            } else if (percentage >= 60) {
+                badgeIcon.textContent = '🥉';
+                badgeText.textContent = 'Pelajar Semangat';
+                badgeDescription.textContent = 'Tidak buruk! Masih ada ruang untuk berkembang!';
+            } else {
+                badgeIcon.textContent = '📚';
+                badgeText.textContent = 'Pemula';
+                badgeDescription.textContent = 'Jangan menyerah! Ulangi materi dan coba lagi!';
+            }
+            
+            // Update recommendations
+            const recommendationList = document.getElementById('recommendation-list');
+            recommendationList.innerHTML = '';
+            
+            if (quizScores.quiz1 < 4) {
+                recommendationList.innerHTML += '<li>Ulangi Materi 1: Pengertian & Ciri-ciri Isim Tafdhil</li>';
+            }
+            if (quizScores.quiz2 < 4) {
+                recommendationList.innerHTML += '<li>Hafalkan lebih banyak kosakata Isim Tafdhil</li>';
+            }
+            if (quizScores.quiz3 < 7) {
+                recommendationList.innerHTML += '<li>Latihan lebih banyak contoh kalimat dan struktur</li>';
+            }
+            if (totalScore >= 16) {
+                recommendationList.innerHTML += '<li>Lanjutkan ke bab berikutnya - Anda sudah siap!</li>';
+            } else {
+                recommendationList.innerHTML += '<li>Ulangi seluruh materi Bab 1 untuk pemahaman yang lebih baik</li>';
+            }
+            
+            showInlineMessage(`🎉 Selamat! Total skor Anda: ${totalScore}/20 (${percentage.toFixed(1)}%)`, 'success');
+        }
+
         // Initialize Element SDK if available
         if (window.elementSdk) {
             const defaultConfig = {
@@ -3703,5 +5495,5 @@
             });
         }
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9983be02c4faef69',t:'MTc2MjA4NzY2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'998445d175847082',t:'MTc2MjA5MzIyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
