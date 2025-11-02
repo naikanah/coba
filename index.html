@@ -168,6 +168,7 @@
             padding: 12px 20px;
             border-radius: 15px;
             position: relative;
+            cursor: pointer;
         }
 
         .nav-menu a:hover {
@@ -272,18 +273,6 @@
 
         .cta-button:active {
             transform: translateY(-2px) scale(1.02);
-        }
-
-        .cta-button:disabled {
-            background: linear-gradient(135deg, #ccc, #999);
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .cta-button:disabled:hover {
-            transform: none;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         /* Name Input Section */
@@ -1104,6 +1093,689 @@
             font-weight: 600;
         }
 
+        /* Hidden sections */
+        .main-section {
+            display: none;
+        }
+
+        .main-section.active {
+            display: block;
+        }
+
+        /* Materi Detail Styles */
+        .materi-content-detail {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 248, 255, 0.9));
+            border-radius: 35px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+        }
+
+        .materi-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #00A9B5;
+        }
+
+        .materi-header {
+            margin-bottom: 25px;
+        }
+
+        .materi-header h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: #00A9B5;
+            margin-bottom: 10px;
+        }
+
+        .materi-header p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .materi-body {
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .definition-text {
+            font-size: 18px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border-left: 4px solid #4682B4;
+        }
+
+        .arabic-text {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #4682B4;
+            background: rgba(70, 130, 180, 0.1);
+            padding: 2px 8px;
+            border-radius: 8px;
+        }
+
+        .example-box {
+            background: rgba(0, 169, 181, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .example-box h4 {
+            color: #00A9B5;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .example-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .arabic-example {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #4682B4;
+        }
+
+        .meaning {
+            color: #666;
+            font-weight: 600;
+        }
+
+        .ciri-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .ciri-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .ciri-number {
+            background: linear-gradient(135deg, #00A9B5, #4682B4);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .ciri-content {
+            flex: 1;
+        }
+
+        .ciri-content h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .ciri-content p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .example-comparison {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+
+        .correct, .incorrect {
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .correct {
+            background: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+            border: 2px solid rgba(40, 167, 69, 0.3);
+        }
+
+        .incorrect {
+            background: rgba(220, 53, 69, 0.1);
+            color: #dc3545;
+            border: 2px solid rgba(220, 53, 69, 0.3);
+        }
+
+        .example-pair {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin: 10px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .note {
+            background: rgba(255, 193, 7, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+            margin-top: 15px;
+            font-weight: 600;
+            color: #856404;
+        }
+
+        .pattern-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .pattern-title {
+            font-weight: 700;
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        .pattern-formula {
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .pattern-formula .arabic-text {
+            font-size: 28px;
+            background: none;
+            padding: 0;
+        }
+
+        /* Vocabulary Grid Styles */
+        .vocabulary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .vocab-card {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .vocab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: #00A9B5;
+        }
+
+        .vocab-number {
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            background: linear-gradient(135deg, #FF8C00, #FFD700);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .vocab-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .vocab-pair {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
+        }
+
+        .original-word, .tafdhil-word {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            padding: 10px;
+            border-radius: 10px;
+            min-width: 120px;
+        }
+
+        .original-word {
+            background: rgba(70, 130, 180, 0.1);
+        }
+
+        .tafdhil-word {
+            background: rgba(0, 169, 181, 0.1);
+        }
+
+        .original-word .arabic-text, .tafdhil-word .arabic-text {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .original-word .meaning, .tafdhil-word .meaning {
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .arrow {
+            font-size: 24px;
+            color: #00A9B5;
+            font-weight: 800;
+        }
+
+        .audio-btn {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        .audio-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        .learning-tip-box {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 5px solid #ffc107;
+        }
+
+        .learning-tip-box h4 {
+            color: #856404;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .learning-tip-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .learning-tip-box li {
+            color: #856404;
+            margin: 10px 0;
+            padding-left: 10px;
+            font-weight: 600;
+        }
+
+        /* Progress Section */
+        .progress-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .progress-section h3 {
+            color: #00A9B5;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .progress-section .progress-text {
+            font-size: 16px;
+            color: #666;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        .next-button, .prev-button {
+            background: linear-gradient(135deg, #00A9B5, #4682B4);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0, 169, 181, 0.3);
+            transition: all 0.3s;
+            font-family: 'Nunito', sans-serif;
+            margin: 10px;
+        }
+
+        .next-button:hover, .prev-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 169, 181, 0.4);
+        }
+
+        .prev-button {
+            background: linear-gradient(135deg, #6c757d, #495057);
+        }
+
+        .prev-button:hover {
+            box-shadow: 0 12px 35px rgba(108, 117, 125, 0.4);
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        /* Sentence and Dialog Styles */
+        .sentence-group {
+            margin: 30px 0;
+        }
+
+        .sentence-group h5 {
+            color: #00A9B5;
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background: rgba(0, 169, 181, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #00A9B5;
+        }
+
+        .sentence-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .sentence-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+            border-color: #00A9B5;
+        }
+
+        .sentence-card .arabic-sentence {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #4682B4;
+            margin-bottom: 8px;
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .sentence-card .sentence-meaning {
+            color: #666;
+            font-size: 16px;
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .structure-analysis {
+            margin: 20px 0;
+        }
+
+        .analysis-example {
+            margin: 25px 0;
+        }
+
+        .breakdown-card {
+            background: rgba(70, 130, 180, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 15px 0;
+        }
+
+        .breakdown-card .arabic-sentence {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #4682B4;
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .breakdown-parts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .part-item {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .part-item:hover {
+            border-color: #00A9B5;
+            transform: translateY(-2px);
+        }
+
+        .part-arabic {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #4682B4;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .part-function {
+            font-size: 14px;
+            font-weight: 800;
+            color: #00A9B5;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .part-meaning {
+            font-size: 16px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .dialog-section {
+            margin: 20px 0;
+        }
+
+        .dialog-container {
+            background: rgba(0, 169, 181, 0.05);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .dialog-line {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .dialog-line:hover {
+            transform: translateX(5px);
+        }
+
+        .speaker-a {
+            background: linear-gradient(135deg, rgba(0, 169, 181, 0.1), rgba(0, 169, 181, 0.05));
+            border-left: 4px solid #00A9B5;
+        }
+
+        .speaker-b {
+            background: linear-gradient(135deg, rgba(70, 130, 180, 0.1), rgba(70, 130, 180, 0.05));
+            border-left: 4px solid #4682B4;
+            flex-direction: row-reverse;
+        }
+
+        .speaker-name {
+            font-weight: 800;
+            color: #2c3e50;
+            font-size: 16px;
+            min-width: 80px;
+            text-align: center;
+            padding: 8px 12px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .dialog-content {
+            flex: 1;
+        }
+
+        .dialog-content .arabic-text {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #4682B4;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .dialog-content .meaning {
+            color: #666;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Responsive adjustments for materi content */
+        @media (max-width: 768px) {
+            .materi-content-detail {
+                padding: 25px 20px;
+                margin: 15px 0;
+            }
+
+            .materi-card {
+                padding: 20px 15px;
+            }
+
+            .vocabulary-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .vocab-card {
+                padding: 15px;
+            }
+
+            .vocab-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .vocab-pair {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .original-word, .tafdhil-word {
+                min-width: 100px;
+            }
+
+            .ciri-item {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .example-comparison {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .next-button, .prev-button {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .sentence-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .sentence-card .arabic-sentence {
+                font-size: 20px;
+            }
+
+            .breakdown-parts {
+                grid-template-columns: 1fr;
+            }
+
+            .dialog-line {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .speaker-b {
+                flex-direction: column;
+            }
+
+            .dialog-content .arabic-text {
+                font-size: 18px;
+            }
+
+            .part-arabic {
+                font-size: 18px;
+            }
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -1180,26 +1852,6 @@
                 font-size: 16px;
             }
 
-            .map-step {
-                flex-direction: column;
-                text-align: center;
-                padding: 25px;
-            }
-
-            .step-number {
-                width: 60px;
-                height: 60px;
-                font-size: 24px;
-            }
-
-            .step-title {
-                font-size: 20px;
-            }
-
-            .step-description {
-                font-size: 16px;
-            }
-
             .interactive-grid {
                 grid-template-columns: 1fr;
             }
@@ -1212,9 +1864,7 @@
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-        }
 
-        @media (max-width: 768px) {
             .bab-grid {
                 grid-template-columns: 1fr;
                 gap: 25px;
@@ -1411,10 +2061,6 @@
                 font-size: 20px;
             }
 
-            .step-icon {
-                font-size: 40px;
-            }
-
             .materi-intro {
                 font-size: 18px;
             }
@@ -1467,14 +2113,14 @@
      </svg><span class="logo-text" id="website-title">Portal Petualang Bahasa Arab</span>
     </div>
     <ul class="nav-menu">
-     <li><a href="#beranda" id="nav-home">🏠 Beranda</a></li>
-     <li><a href="#petunjuk" id="nav-guide">📋 Petunjuk Penggunaan</a></li>
-     <li><a href="#peta" id="nav-map">🗺️ Peta Belajar</a></li>
-     <li><a href="#materi" id="nav-material">📚 Materi</a></li>
-     <li><a href="#latihan" id="nav-exercise">🎯 Latihan</a></li>
+     <li><a onclick="showSection('beranda')" id="nav-home">🏠 Beranda</a></li>
+     <li><a onclick="showSection('petunjuk')" id="nav-guide">📋 Petunjuk Penggunaan</a></li>
+     <li><a onclick="showSection('peta')" id="nav-map">🗺️ Peta Belajar</a></li>
+     <li><a onclick="showSection('materi-detail')" id="nav-material">📚 Materi</a></li>
+     <li><a onclick="showSection('latihan')" id="nav-exercise">🎯 Latihan</a></li>
     </ul>
    </nav><!-- Hero Section -->
-   <section class="hero main-section" id="beranda">
+   <section class="hero main-section active" id="beranda">
     <div class="hero-content">
      <h1 class="greeting"><span id="greeting-text">Assalamu'alaikum</span>, <span id="student-name">Petualang</span>! 🌟</h1>
      <div class="arabic-greeting">
@@ -1491,7 +2137,7 @@
      <div class="mascot-illustration">
       <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><!-- Adventure Map in background --> <rect x="20" y="80" width="60" height="40" rx="5" fill="#F5DEB3" opacity="0.8" /> <path d="M 25 85 L 35 95 L 45 85 L 55 100 L 65 90 L 75 95" stroke="#8B4513" stroke-width="2" fill="none" /> <!-- Hud-hud pointing at map --> <ellipse cx="120" cy="120" rx="35" ry="42" fill="#00A9B5" /> <circle cx="120" cy="85" r="28" fill="#4682B4" /> <circle cx="110" cy="80" r="6" fill="white" /> <circle cx="130" cy="80" r="6" fill="white" /> <circle cx="110" cy="80" r="4" fill="#333" /> <circle cx="130" cy="80" r="4" fill="#333" /> <polygon points="120,90 112,100 128,100" fill="#FFD700" /> <polygon points="120,55 115,68 125,68" fill="#FF8C00" /> <polygon points="118,58 114,65 122,65" fill="#FFD700" /> <!-- Wing pointing to map --> <path d="M 85 100 Q 70 95 60 105 Q 70 115 85 110" fill="#4682B4" /> <path d="M 155 100 Q 170 95 180 105 Q 170 115 155 110" fill="#4682B4" /> <!-- Feet --> <ellipse cx="110" cy="155" rx="5" ry="10" fill="#FFD700" /> <ellipse cx="130" cy="155" rx="5" ry="10" fill="#FFD700" /> <!-- Sparkles around --> <circle cx="160" cy="60" r="3" fill="#FFD700" opacity="0.8" /> <circle cx="180" cy="80" r="2" fill="#FFD700" opacity="0.6" /> <circle cx="170" cy="100" r="2.5" fill="#FFD700" opacity="0.7" />
       </svg>
-     </div><button class="cta-button" id="cta-button" disabled>🚀 Ayo Mulai Belajar!</button>
+     </div><button class="cta-button" id="cta-button" onclick="showSection('materi-detail')">🚀 Ayo Mulai Belajar!</button>
     </div>
    </section><!-- Features Section -->
    <section class="features-section main-section" id="materi">
@@ -1523,13 +2169,13 @@
      </div>
     </div>
    </section><!-- Detailed Materi Section -->
-   <section class="materi-detail-section main-section" id="materi-detail" style="display: none;">
+   <section class="materi-detail-section main-section" id="materi-detail">
     <div class="back-navigation"><button class="back-button" onclick="showSection('beranda')"> ← Kembali ke Beranda </button>
     </div>
     <h2 class="section-title">📚 Materi Pembelajaran Bahasa Arab</h2>
     <p class="materi-intro">Pilih bab yang ingin kamu pelajari! Setiap bab memiliki petualangan seru yang berbeda.</p>
     <div class="bab-grid">
-     <div class="bab-card" data-bab="isim-tafdhil">
+     <div class="bab-card" onclick="showTimelineDetail('isim-tafdhil')">
       <div class="bab-icon">
        🏆
       </div>
@@ -1548,7 +2194,7 @@
        </div>
       </div>
      </div>
-     <div class="bab-card" data-bab="bentuk">
+     <div class="bab-card" onclick="showLockedMessage('bentuk')">
       <div class="bab-icon">
        🔷
       </div>
@@ -1567,7 +2213,7 @@
        </div>
       </div>
      </div>
-     <div class="bab-card" data-bab="warna">
+     <div class="bab-card" onclick="showLockedMessage('warna')">
       <div class="bab-icon">
        🌈
       </div>
@@ -1586,7 +2232,7 @@
        </div>
       </div>
      </div>
-     <div class="bab-card" data-bab="kalender-hijriah">
+     <div class="bab-card" onclick="showLockedMessage('kalender-hijriah')">
       <div class="bab-icon">
        🌙
       </div>
@@ -1629,7 +2275,7 @@
     <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 40px; font-weight: 600;">Ikuti timeline petualangan belajar bahasa Arab! Setiap langkah membawamu lebih dekat dengan penguasaan bahasa Arab.</p>
     <div class="timeline-container"><!-- Timeline Line -->
      <div class="timeline-line"></div><!-- Timeline Items -->
-     <div class="timeline-item completed" data-bab="isim-tafdhil">
+     <div class="timeline-item completed" onclick="showTimelineDetail('isim-tafdhil')">
       <div class="timeline-marker">
        <div class="timeline-icon">
         🏆
@@ -1655,7 +2301,7 @@
        </div>
       </div>
      </div>
-     <div class="timeline-item current" data-bab="bentuk">
+     <div class="timeline-item current" onclick="showTimelineDetail('bentuk')">
       <div class="timeline-marker">
        <div class="timeline-icon">
         🔷
@@ -1679,7 +2325,7 @@
        </div>
       </div>
      </div>
-     <div class="timeline-item locked" data-bab="warna">
+     <div class="timeline-item locked" onclick="showLockedMessage('warna')">
       <div class="timeline-marker">
        <div class="timeline-icon">
         🌈
@@ -1705,7 +2351,7 @@
        </div>
       </div>
      </div>
-     <div class="timeline-item locked" data-bab="kalender-hijriah">
+     <div class="timeline-item locked" onclick="showLockedMessage('kalender-hijriah')">
       <div class="timeline-marker">
        <div class="timeline-icon">
         🌙
@@ -1785,6 +2431,110 @@
       <p class="interactive-description">Ekspresikan kreativitasmu sambil belajar dengan aktivitas mewarnai dan menggambar bertema Arab.</p>
      </div>
     </div>
+   </section><!-- Bab 1: Isim Tafdhil Content -->
+   <section class="materi-detail-section main-section" id="bab-isim-tafdhil">
+    <div class="back-navigation"><button class="back-button" onclick="showSection('peta')"> ← Kembali ke Timeline </button>
+    </div>
+    <h2 class="section-title">🏆 Bab 1: Isim Tafdhil</h2>
+    <div class="arabic-greeting" style="text-align: center; margin-bottom: 30px;">
+     الاِسْمُ التَّفْضِيْلِ
+    </div>
+    <p class="materi-intro">Selamat datang di Bab 1! Mari pelajari cara membandingkan benda dan sifat dalam bahasa Arab.</p>
+    <div class="bab-grid">
+     <div class="bab-card" onclick="showMateriDetail('pengertian')">
+      <div class="bab-icon">
+       📖
+      </div>
+      <div class="bab-content">
+       <h3 class="bab-title">Materi 1: Pengertian &amp; Ciri-ciri</h3>
+       <div class="bab-arabic">
+        مَا هُوَ الاِسْمُ التَّفْضِيْلِ؟
+       </div>
+       <p class="bab-description">Pelajari pengertian dasar Isim Tafdhil, fungsinya, dan ciri-ciri khusus dalam bahasa Arab.</p>
+       <div class="bab-progress">
+        <div class="progress-bar">
+         <div class="progress-fill" style="width: 100%"></div>
+        </div><span class="progress-text">Tersedia</span>
+       </div>
+       <div class="bab-stats"><span class="stat-item">📚 Definisi</span> <span class="stat-item">🔍 Ciri-ciri</span> <span class="stat-item">⏱️ 15 Menit</span>
+       </div>
+      </div>
+     </div>
+     <div class="bab-card" onclick="showMateriDetail('mufradat')">
+      <div class="bab-icon">
+       📝
+      </div>
+      <div class="bab-content">
+       <h3 class="bab-title">Materi 2: Contoh Mufradat</h3>
+       <div class="bab-arabic">
+        أَمْثِلَةُ المُفْرَدَاتِ
+       </div>
+       <p class="bab-description">Pelajari berbagai kosakata Isim Tafdhil yang sering digunakan dalam kehidupan sehari-hari.</p>
+       <div class="bab-progress">
+        <div class="progress-bar">
+         <div class="progress-fill" style="width: 100%"></div>
+        </div><span class="progress-text">Tersedia</span>
+       </div>
+       <div class="bab-stats"><span class="stat-item">📚 Kosakata</span> <span class="stat-item">🔊 Audio</span> <span class="stat-item">⏱️ 20 Menit</span>
+       </div>
+      </div>
+     </div>
+     <div class="bab-card" onclick="showMateriDetail('kalimat')">
+      <div class="bab-icon">
+       💬
+      </div>
+      <div class="bab-content">
+       <h3 class="bab-title">Materi 3: Contoh Kalimat</h3>
+       <div class="bab-arabic">
+        أَمْثِلَةُ الجُمَلِ
+       </div>
+       <p class="bab-description">Lihat berbagai contoh penggunaan Isim Tafdhil dalam kalimat dan percakapan sehari-hari.</p>
+       <div class="bab-progress">
+        <div class="progress-bar">
+         <div class="progress-fill" style="width: 100%"></div>
+        </div><span class="progress-text">Tersedia</span>
+       </div>
+       <div class="bab-stats"><span class="stat-item">📝 Kalimat</span> <span class="stat-item">🗣️ Dialog</span> <span class="stat-item">⏱️ 18 Menit</span>
+       </div>
+      </div>
+     </div>
+     <div class="bab-card" onclick="showMateriDetail('latihan')">
+      <div class="bab-icon">
+       🎯
+      </div>
+      <div class="bab-content">
+       <h3 class="bab-title">Materi 4: Latihan &amp; Kuis</h3>
+       <div class="bab-arabic">
+        التَّدْرِيْبَاتُ وَالاِخْتِبَارُ
+       </div>
+       <p class="bab-description">Uji pemahamanmu dengan latihan soal dan kuis interaktif untuk menguasai Isim Tafdhil.</p>
+       <div class="bab-progress">
+        <div class="progress-bar">
+         <div class="progress-fill" style="width: 100%"></div>
+        </div><span class="progress-text">Tersedia</span>
+       </div>
+       <div class="bab-stats"><span class="stat-item">❓ 15 Soal</span> <span class="stat-item">🏆 Kuis</span> <span class="stat-item">⏱️ 17 Menit</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="learning-tips">
+     <h3 class="tips-title">💡 Tips Belajar Isim Tafdhil</h3>
+     <div class="tips-grid">
+      <div class="tip-item"><span class="tip-icon">📚</span>
+       <p>Mulai dengan memahami pengertian dasar terlebih dahulu</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">🔢</span>
+       <p>Hafalkan rumus pembentukan: أَفْعَل (af'al)</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">💭</span>
+       <p>Pikirkan perbandingan dalam bahasa Indonesia dulu</p>
+      </div>
+      <div class="tip-item"><span class="tip-icon">✍️</span>
+       <p>Latihan membuat kalimat sendiri setelah belajar</p>
+      </div>
+     </div>
+    </div>
    </section><!-- Petunjuk Penggunaan -->
    <section class="adventure-map main-section" id="petunjuk">
     <h2 class="section-title">📋 Petunjuk Penggunaan</h2>
@@ -1814,816 +2564,1137 @@
       <p class="feature-description">Jika mengalami kesulitan, tanyakan pada guru atau teman. Jangan ragu untuk mencoba berkali-kali!</p>
      </div>
     </div>
-   </section><!-- Isim Tafdhil Detail Section -->
-   <section class="materi-detail-section main-section" id="isim-tafdhil-detail" style="display: none;">
-    <div class="back-navigation"><button class="back-button" onclick="showSection('materi-detail')"> ← Kembali ke Daftar Materi </button>
-    </div>
-    <h2 class="section-title">🏆 Bab 1: Isim Tafdhil (الاِسْمُ التَّفْضِيْلِ)</h2><!-- Navigation Menu Materi -->
-    <div class="materi-navigation" style="margin-bottom: 40px;">
-     <div style="background: white; padding: 30px; border-radius: 25px; box-shadow: 0 15px 50px rgba(0,0,0,0.15);">
-      <h3 style="color: #00A9B5; font-size: 24px; font-weight: 800; text-align: center; margin-bottom: 25px;">📚 Pilih Materi yang Ingin Dipelajari</h3>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-       <div class="materi-nav-card" onclick="showMateri('materi-1')" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); padding: 20px; border-radius: 15px; cursor: pointer; transition: all 0.3s; text-align: center; border: 3px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='#00A9B5'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='transparent'">
-        <div style="font-size: 40px; margin-bottom: 10px;">
-         📖
-        </div>
-        <h4 style="color: #1976d2; font-weight: 800; margin-bottom: 8px;">Materi 1</h4>
-        <p style="color: #666; font-size: 14px; margin: 0;">Pengertian &amp; Ciri-ciri</p>
-       </div>
-       <div class="materi-nav-card" onclick="showMateri('materi-2')" style="background: linear-gradient(135deg, #fff3e0, #ffcc02); padding: 20px; border-radius: 15px; cursor: pointer; transition: all 0.3s; text-align: center; border: 3px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='#FF8C00'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='transparent'">
-        <div style="font-size: 40px; margin-bottom: 10px;">
-         📚
-        </div>
-        <h4 style="color: #f57c00; font-weight: 800; margin-bottom: 8px;">Materi 2</h4>
-        <p style="color: #666; font-size: 14px; margin: 0;">Mufradat/Kosakata</p>
-       </div>
-       <div class="materi-nav-card" onclick="showMateri('materi-3')" style="background: linear-gradient(135deg, #e8f5e8, #a5d6a7); padding: 20px; border-radius: 15px; cursor: pointer; transition: all 0.3s; text-align: center; border: 3px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='#4caf50'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='transparent'">
-        <div style="font-size: 40px; margin-bottom: 10px;">
-         💬
-        </div>
-        <h4 style="color: #388e3c; font-weight: 800; margin-bottom: 8px;">Materi 3</h4>
-        <p style="color: #666; font-size: 14px; margin: 0;">Contoh Kalimat</p>
-       </div>
-       <div class="materi-nav-card" onclick="showMateri('materi-4')" style="background: linear-gradient(135deg, #fce4ec, #f8bbd9); padding: 20px; border-radius: 15px; cursor: pointer; transition: all 0.3s; text-align: center; border: 3px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='#e91e63'" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='transparent'">
-        <div style="font-size: 40px; margin-bottom: 10px;">
-         🎵
-        </div>
-        <h4 style="color: #c2185b; font-weight: 800; margin-bottom: 8px;">Materi 4</h4>
-        <p style="color: #666; font-size: 14px; margin: 0;">Lagu &amp; Pembelajaran</p>
-       </div>
-      </div>
-      <div style="text-align: center; margin-top: 25px;">
-       <div class="materi-nav-card" onclick="showMateri('latihan-akhir')" style="background: linear-gradient(135deg, #FF8C00, #FFD700); padding: 20px; border-radius: 15px; cursor: pointer; transition: all 0.3s; text-align: center; border: 3px solid transparent; display: inline-block; min-width: 250px;" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 15px 40px rgba(255, 140, 0, 0.4)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none'">
-        <div style="font-size: 50px; margin-bottom: 10px;">
-         🏆
-        </div>
-        <h4 style="color: white; font-weight: 800; margin-bottom: 8px; font-size: 18px;">Latihan Akhir</h4>
-        <p style="color: white; font-size: 14px; margin: 0; opacity: 0.9;">Uji Semua Materi</p>
-       </div>
-      </div>
-     </div>
-    </div><!-- Materi 1: Pengertian dan Ciri-ciri -->
-    <div id="materi-1" class="materi-content" style="display: none;">
-     <div class="back-navigation" style="margin-bottom: 30px;"><button onclick="backToMateriNavigation()" style="background: linear-gradient(135deg, #00A9B5, #4682B4); color: white; border: none; padding: 15px 30px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(0, 169, 181, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(0, 169, 181, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 169, 181, 0.3)'"> ← Kembali ke Menu Materi Bab 1 </button>
-     </div>
-     <div class="learning-tips" style="margin-bottom: 40px;">
-      <div class="tips-title" style="font-size: 32px; margin-bottom: 25px;">
-       📖 Materi 1: Pengertian &amp; Ciri-ciri Isim Tafdhil
-      </div>
-      <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 25px;">
-       <div style="font-size: 20px; color: #333; line-height: 1.8; margin-bottom: 20px;"><strong>Isim Tafdhil</strong> adalah kata dalam bahasa Arab yang memiliki makna <strong>"lebih"</strong> atau <strong>"paling"</strong>. Kata ini digunakan untuk membandingkan dua hal atau lebih.
-       </div>
-       <div style="background: linear-gradient(135deg, #e3f2fd, #f0f8ff); padding: 25px; border-radius: 15px; border-left: 5px solid #00A9B5;">
-        <div style="font-size: 18px; color: #2c3e50; font-weight: 600; margin-bottom: 15px;">
-         🔍 <strong>Ciri-ciri Penting Isim Tafdhil:</strong>
-        </div>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-         <li style="margin-bottom: 12px; font-size: 17px; color: #34495e;">✅ <strong>Tidak pernah menggunakan tanwin</strong> (tidak ada ٌ ٍ ً di akhir kata)</li>
-         <li style="margin-bottom: 12px; font-size: 17px; color: #34495e;">✅ <strong>Tidak terikat dengan jenis kelamin</strong> kata yang disifatinya</li>
-         <li style="margin-bottom: 12px; font-size: 17px; color: #34495e;">✅ <strong>Mengikuti pola أَفْعَلُ</strong> (af'alu)</li>
-        </ul>
-       </div>
-      </div><!-- Contoh Tidak Terikat Gender -->
-      <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-       <div style="font-size: 22px; color: #00A9B5; font-weight: 800; margin-bottom: 20px; text-align: center;">
-        🎯 Contoh: Isim Tafdhil Tidak Terikat Gender
-       </div>
-       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-        <div style="background: linear-gradient(135deg, #fff3e0, #ffeaa7); padding: 20px; border-radius: 15px; text-align: center;">
-         <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 28px; color: #4682B4; margin-bottom: 10px; font-weight: 700;">
-          الْمَدْرَسَةُ أَكْبَرُ
-         </div>
-         <div style="font-size: 16px; color: #666; font-weight: 600;">
-          Sekolah (perempuan) lebih besar
-         </div>
-        </div>
-        <div style="background: linear-gradient(135deg, #e8f5e8, #a8e6a3); padding: 20px; border-radius: 15px; text-align: center;">
-         <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 28px; color: #4682B4; margin-bottom: 10px; font-weight: 700;">
-          الْمَكْتَبُ أَكْبَرُ
-         </div>
-         <div style="font-size: 16px; color: #666; font-weight: 600;">
-          Kantor (laki-laki) lebih besar
-         </div>
-        </div>
-       </div>
-       <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 10px; text-align: center;">
-        <div style="font-size: 16px; color: #666; font-weight: 600;">
-         💡 Perhatikan: Kata <strong>أكبر</strong> tetap sama, tidak berubah meskipun المدرسة (perempuan) dan المكتب (laki-laki)
-        </div>
-       </div>
-      </div><!-- Tombol Latihan Materi 1 -->
-      <div style="margin-top: 30px; text-align: center;"><button onclick="showQuizMateri1()" style="background: linear-gradient(135deg, #1976d2, #42a5f5); color: white; border: none; padding: 18px 35px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(25, 118, 210, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(25, 118, 210, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(25, 118, 210, 0.3)'"> 🎯 Latihan Materi 1 </button>
-      </div>
-     </div>
-    </div><!-- Quiz Materi 1 - Halaman Terpisah -->
-    <div id="quiz-materi-1" class="materi-content" style="display: none;">
-     <div class="back-navigation" style="margin-bottom: 30px;"><button onclick="showMateri('materi-1')" style="background: linear-gradient(135deg, #00A9B5, #4682B4); color: white; border: none; padding: 15px 30px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(0, 169, 181, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(0, 169, 181, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 169, 181, 0.3)'"> ← Kembali ke Materi 1 </button>
-     </div>
-     <div class="learning-tips" style="margin-bottom: 40px;">
-      <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-       <div style="font-size: 24px; color: #1976d2; font-weight: 800; margin-bottom: 25px; text-align: center;">
-        🎯 Latihan Materi 1: Pengertian &amp; Ciri-ciri Isim Tafdhil
-       </div><!-- Soal 1 -->
-       <div class="quiz-question" data-question="1" style="margin-bottom: 30px; padding: 25px; background: #f8f9fa; border-radius: 15px; border-left: 5px solid #1976d2;">
-        <div style="font-size: 18px; font-weight: 700; color: #2c3e50; margin-bottom: 15px;">
-         1. Isim Tafdhil adalah kata dalam bahasa Arab yang memiliki makna ...
-        </div>
-        <div class="quiz-options"><label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q1" value="a" style="margin-right: 10px;"> a) Kata kerja </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q1" value="b" style="margin-right: 10px;"> b) "Lebih" atau "paling" </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q1" value="c" style="margin-right: 10px;"> c) Kata benda </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q1" value="d" style="margin-right: 10px;"> d) Kata tanya </label>
-        </div>
-       </div><!-- Soal 2 -->
-       <div class="quiz-question" data-question="2" style="margin-bottom: 30px; padding: 25px; background: #f8f9fa; border-radius: 15px; border-left: 5px solid #1976d2;">
-        <div style="font-size: 18px; font-weight: 700; color: #2c3e50; margin-bottom: 15px;">
-         2. Isim Tafdhil digunakan untuk ...
-        </div>
-        <div class="quiz-options"><label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q2" value="a" style="margin-right: 10px;"> a) Menyatakan waktu </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q2" value="b" style="margin-right: 10px;"> b) Membandingkan dua hal atau lebih </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q2" value="c" style="margin-right: 10px;"> c) Menyatakan tempat </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q2" value="d" style="margin-right: 10px;"> d) Menyatakan jumlah </label>
-        </div>
-       </div><!-- Soal 3 -->
-       <div class="quiz-question" data-question="3" style="margin-bottom: 30px; padding: 25px; background: #f8f9fa; border-radius: 15px; border-left: 5px solid #1976d2;">
-        <div style="font-size: 18px; font-weight: 700; color: #2c3e50; margin-bottom: 15px;">
-         3. Berikut yang <strong>bukan</strong> merupakan ciri-ciri Isim Tafdhil adalah ...
-        </div>
-        <div class="quiz-options"><label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q3" value="a" style="margin-right: 10px;"> a) Selalu menggunakan tanwin </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q3" value="b" style="margin-right: 10px;"> b) Tidak pernah menggunakan tanwin </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q3" value="c" style="margin-right: 10px;"> c) Terikat dengan jenis kelamin </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q3" value="d" style="margin-right: 10px;"> d) Mengikuti pola فَعِيْلٌ </label>
-        </div>
-       </div><!-- Soal 4 -->
-       <div class="quiz-question" data-question="4" style="margin-bottom: 30px; padding: 25px; background: #f8f9fa; border-radius: 15px; border-left: 5px solid #1976d2;">
-        <div style="font-size: 18px; font-weight: 700; color: #2c3e50; margin-bottom: 15px;">
-         4. Isim Tafdhil mengikuti pola ...
-        </div>
-        <div class="quiz-options"><label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q4" value="a" style="margin-right: 10px;"> a) فَعِيْلٌ (fa'iilun) </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q4" value="b" style="margin-right: 10px;"> b) أَفْعَلُ (af'alu) </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q4" value="c" style="margin-right: 10px;"> c) مَفْعُوْلٌ (maf'uulun) </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q4" value="d" style="margin-right: 10px;"> d) فَاعِلٌ (faa'ilun) </label>
-        </div>
-       </div><!-- Soal 5 -->
-       <div class="quiz-question" data-question="5" style="margin-bottom: 30px; padding: 25px; background: #f8f9fa; border-radius: 15px; border-left: 5px solid #1976d2;">
-        <div style="font-size: 18px; font-weight: 700; color: #2c3e50; margin-bottom: 15px;">
-         5. Contoh yang menunjukkan Isim Tafdhil tidak terikat gender adalah ...
-        </div>
-        <div class="quiz-options"><label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q5" value="a" style="margin-right: 10px;"> a) الْمَدْرَسَةُ كَبِيْرَةٌ - الْمَكْتَبُ كَبِيْرٌ </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q5" value="b" style="margin-right: 10px;"> b) الْمَدْرَسَةُ أَكْبَرُ - الْمَكْتَبُ أَكْبَرُ </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q5" value="c" style="margin-right: 10px;"> c) الطَّالِبَةُ جَمِيْلَةٌ - الطَّالِبُ جَمِيْلٌ </label> <label style="display: block; margin-bottom: 10px; cursor: pointer; padding: 10px; border-radius: 8px; transition: all 0.3s;" onmouseover="this.style.background='#e3f2fd'" onmouseout="this.style.background='transparent'"> <input type="radio" name="q5" value="d" style="margin-right: 10px;"> d) الْبَيْتُ صَغِيْرٌ - الْغُرْفَةُ صَغِيْرَةٌ </label>
-        </div>
-       </div><!-- Tombol Submit dan Reset -->
-       <div style="text-align: center; margin-top: 30px;"><button onclick="checkQuizMateri1()" style="background: linear-gradient(135deg, #1976d2, #42a5f5); color: white; border: none; padding: 15px 30px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(25, 118, 210, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif; margin-right: 15px;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(25, 118, 210, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(25, 118, 210, 0.3)'"> ✅ Periksa Jawaban </button> <button onclick="resetQuizMateri1()" style="background: linear-gradient(135deg, #6c757d, #495057); color: white; border: none; padding: 15px 30px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(108, 117, 125, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(108, 117, 125, 0.3)'"> 🔄 Ulangi </button>
-       </div><!-- Hasil Quiz -->
-       <div id="quiz-result-materi1" style="margin-top: 25px; padding: 20px; border-radius: 15px; display: none;">
-       </div>
-      </div>
-     </div>
-    </div><!-- Materi 2: Mufradat/Kosakata -->
-    <div id="materi-2" class="materi-content" style="display: none;">
-     <div class="back-navigation" style="margin-bottom: 30px;"><button onclick="backToMateriNavigation()" style="background: linear-gradient(135deg, #00A9B5, #4682B4); color: white; border: none; padding: 15px 30px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(0, 169, 181, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(0, 169, 181, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 169, 181, 0.3)'"> ← Kembali ke Menu Materi Bab 1 </button>
-     </div>
-     <div class="learning-tips" style="margin-bottom: 40px;">
-      <div class="tips-title" style="font-size: 32px; margin-bottom: 25px;">
-       📚 Materi 2: Mufradat/Kosakata Isim Tafdhil
-      </div>
-      <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 25px;">
-       <div style="font-size: 20px; color: #333; line-height: 1.8; margin-bottom: 20px; text-align: center;">
-        Pelajari kosakata Isim Tafdhil dengan pola <strong>أَفْعَلُ</strong> (af'alu). Setiap kata sifat biasa dapat diubah menjadi Isim Tafdhil untuk menunjukkan perbandingan.
-       </div>
-      </div>
-     </div><!-- Kosakata Isim Tafdhil -->
-     <div class="learning-tips" style="margin-bottom: 40px;">
-      <div class="tips-title" style="font-size: 28px; margin-bottom: 25px;">
-       📚 Kosakata Isim Tafdhil (Pola أَفْعَلُ)
-      </div>
-      <div class="vocabulary-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-       <div class="vocab-card" style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer; text-align: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 28px; color: #4682B4; font-weight: 700; margin-bottom: 8px;">
-         طَوِيْلٌ
-        </div>
-        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">
-         panjang
-        </div>
-        <div style="font-size: 24px; margin: 10px 0;">
-         ⬇️
-        </div>
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #FF8C00; font-weight: 700; margin-bottom: 8px;">
-         أَطْوَلُ
-        </div>
-        <div style="font-size: 16px; color: #FF8C00; font-weight: 600;">
-         lebih panjang
-        </div>
-       </div>
-       <div class="vocab-card" style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer; text-align: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 28px; color: #4682B4; font-weight: 700; margin-bottom: 8px;">
-         قَصِيْرٌ
-        </div>
-        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">
-         pendek
-        </div>
-        <div style="font-size: 24px; margin: 10px 0;">
-         ⬇️
-        </div>
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #FF8C00; font-weight: 700; margin-bottom: 8px;">
-         أَقْصَرُ
-        </div>
-        <div style="font-size: 16px; color: #FF8C00; font-weight: 600;">
-         lebih pendek
-        </div>
-       </div>
-       <div class="vocab-card" style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer; text-align: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 28px; color: #4682B4; font-weight: 700; margin-bottom: 8px;">
-         كَبِيْرٌ
-        </div>
-        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">
-         besar
-        </div>
-        <div style="font-size: 24px; margin: 10px 0;">
-         ⬇️
-        </div>
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #FF8C00; font-weight: 700; margin-bottom: 8px;">
-         أَكْبَرُ
-        </div>
-        <div style="font-size: 16px; color: #FF8C00; font-weight: 600;">
-         lebih besar
-        </div>
-       </div>
-       <div class="vocab-card" style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer; text-align: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 28px; color: #4682B4; font-weight: 700; margin-bottom: 8px;">
-         صَغِيْرٌ
-        </div>
-        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">
-         kecil
-        </div>
-        <div style="font-size: 24px; margin: 10px 0;">
-         ⬇️
-        </div>
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #FF8C00; font-weight: 700; margin-bottom: 8px;">
-         أَصْغَرُ
-        </div>
-        <div style="font-size: 16px; color: #FF8C00; font-weight: 600;">
-         lebih kecil
-        </div>
-       </div>
-       <div class="vocab-card" style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer; text-align: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 28px; color: #4682B4; font-weight: 700; margin-bottom: 8px;">
-         كَثِيْرٌ
-        </div>
-        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">
-         banyak
-        </div>
-        <div style="font-size: 24px; margin: 10px 0;">
-         ⬇️
-        </div>
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #FF8C00; font-weight: 700; margin-bottom: 8px;">
-         أَكْثَرُ
-        </div>
-        <div style="font-size: 16px; color: #FF8C00; font-weight: 600;">
-         lebih banyak
-        </div>
-       </div>
-       <div class="vocab-card" style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer; text-align: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 28px; color: #4682B4; font-weight: 700; margin-bottom: 8px;">
-         عَمِيْقٌ
-        </div>
-        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">
-         dalam
-        </div>
-        <div style="font-size: 24px; margin: 10px 0;">
-         ⬇️
-        </div>
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #FF8C00; font-weight: 700; margin-bottom: 8px;">
-         أَعْمَقُ
-        </div>
-        <div style="font-size: 16px; color: #FF8C00; font-weight: 600;">
-         lebih dalam
-        </div>
-       </div>
-       <div class="vocab-card" style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer; text-align: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 28px; color: #4682B4; font-weight: 700; margin-bottom: 8px;">
-         سَهْلٌ
-        </div>
-        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">
-         mudah
-        </div>
-        <div style="font-size: 24px; margin: 10px 0;">
-         ⬇️
-        </div>
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #FF8C00; font-weight: 700; margin-bottom: 8px;">
-         أَسْهَلُ
-        </div>
-        <div style="font-size: 16px; color: #FF8C00; font-weight: 600;">
-         lebih mudah
-        </div>
-       </div>
-       <div class="vocab-card" style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer; text-align: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 28px; color: #4682B4; font-weight: 700; margin-bottom: 8px;">
-         بَعِيْدٌ
-        </div>
-        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">
-         jauh
-        </div>
-        <div style="font-size: 24px; margin: 10px 0;">
-         ⬇️
-        </div>
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #FF8C00; font-weight: 700; margin-bottom: 8px;">
-         أَبْعَدُ
-        </div>
-        <div style="font-size: 16px; color: #FF8C00; font-weight: 600;">
-         lebih jauh
-        </div>
-       </div>
-       <div class="vocab-card" style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer; text-align: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 28px; color: #4682B4; font-weight: 700; margin-bottom: 8px;">
-         قَرِيْبٌ
-        </div>
-        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">
-         dekat
-        </div>
-        <div style="font-size: 24px; margin: 10px 0;">
-         ⬇️
-        </div>
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #FF8C00; font-weight: 700; margin-bottom: 8px;">
-         أَقْرَبُ
-        </div>
-        <div style="font-size: 16px; color: #FF8C00; font-weight: 600;">
-         lebih dekat
-        </div>
-       </div>
-       <div class="vocab-card" style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer; text-align: center;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 28px; color: #4682B4; font-weight: 700; margin-bottom: 8px;">
-         ضَعِيْفٌ
-        </div>
-        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">
-         lemah
-        </div>
-        <div style="font-size: 24px; margin: 10px 0;">
-         ⬇️
-        </div>
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #FF8C00; font-weight: 700; margin-bottom: 8px;">
-         أَضْعَفُ
-        </div>
-        <div style="font-size: 16px; color: #FF8C00; font-weight: 600;">
-         lebih lemah
-        </div>
-       </div>
-      </div><!-- Latihan Materi 2 -->
-      <div style="margin-top: 30px; text-align: center;"><button onclick="startQuiz('materi-2-latihan')" style="background: linear-gradient(135deg, #f57c00, #ffcc02); color: white; border: none; padding: 18px 35px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(245, 124, 0, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(245, 124, 0, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(245, 124, 0, 0.3)'"> 🎯 Latihan Materi 2 </button>
-      </div>
-     </div>
-    </div><!-- Materi 3: Contoh Kalimat -->
-    <div id="materi-3" class="materi-content" style="display: none;">
-     <div class="back-navigation" style="margin-bottom: 30px;"><button onclick="backToMateriNavigation()" style="background: linear-gradient(135deg, #00A9B5, #4682B4); color: white; border: none; padding: 15px 30px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(0, 169, 181, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(0, 169, 181, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 169, 181, 0.3)'"> ← Kembali ke Menu Materi Bab 1 </button>
-     </div>
-     <div class="learning-tips" style="margin-bottom: 40px;">
-      <div class="tips-title" style="font-size: 32px; margin-bottom: 25px;">
-       💬 Materi 3: Contoh Kalimat Isim Tafdhil
-      </div>
-      <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 25px;">
-       <div style="font-size: 20px; color: #333; line-height: 1.8; margin-bottom: 20px; text-align: center;">
-        Sekarang mari belajar cara menggunakan Isim Tafdhil dalam kalimat sederhana. Perhatikan struktur kalimat dan cara membandingkan dua hal.
-       </div>
-      </div>
-     </div><!-- Contoh Kalimat -->
-     <div class="learning-tips" style="margin-bottom: 40px;">
-      <div class="tips-title" style="font-size: 28px; margin-bottom: 25px;">
-       💬 Contoh Kalimat Sederhana
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px;">
-       <div style="background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-        <div style="text-align: center; margin-bottom: 20px;">
-         <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #4682B4; font-weight: 700; line-height: 1.8;">
-          أَحْمَدُ أَطْوَلُ مِنْ عَلِيٍّ
-         </div>
-        </div>
-        <div style="text-align: center; padding: 15px; background: linear-gradient(135deg, #e8f5e8, #f0f8ff); border-radius: 15px;">
-         <div style="font-size: 17px; color: #2c3e50; font-weight: 600;">
-          Ahmad lebih panjang (tinggi) dari Ali
-         </div>
-        </div>
-       </div>
-       <div style="background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-        <div style="text-align: center; margin-bottom: 20px;">
-         <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #4682B4; font-weight: 700; line-height: 1.8;">
-          هَذَا الْكِتَابُ أَكْبَرُ
-         </div>
-        </div>
-        <div style="text-align: center; padding: 15px; background: linear-gradient(135deg, #fff3e0, #ffeaa7); border-radius: 15px;">
-         <div style="font-size: 17px; color: #2c3e50; font-weight: 600;">
-          Buku ini lebih besar
-         </div>
-        </div>
-       </div>
-       <div style="background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-        <div style="text-align: center; margin-bottom: 20px;">
-         <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #4682B4; font-weight: 700; line-height: 1.8;">
-          الْمَدْرَسَةُ أَقْرَبُ مِنَ الْمَسْجِدِ
-         </div>
-        </div>
-        <div style="text-align: center; padding: 15px; background: linear-gradient(135deg, #e1f5fe, #b3e5fc); border-radius: 15px;">
-         <div style="font-size: 17px; color: #2c3e50; font-weight: 600;">
-          Sekolah lebih dekat dari masjid
-         </div>
-        </div>
-       </div>
-       <div style="background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-        <div style="text-align: center; margin-bottom: 20px;">
-         <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #4682B4; font-weight: 700; line-height: 1.8;">
-          هَذَا الدَّرْسُ أَسْهَلُ
-         </div>
-        </div>
-        <div style="text-align: center; padding: 15px; background: linear-gradient(135deg, #fce4ec, #f8bbd9); border-radius: 15px;">
-         <div style="font-size: 17px; color: #2c3e50; font-weight: 600;">
-          Pelajaran ini lebih mudah
-         </div>
-        </div>
-       </div>
-       <div style="background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-        <div style="text-align: center; margin-bottom: 20px;">
-         <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #4682B4; font-weight: 700; line-height: 1.8;">
-          الْبَيْتُ أَبْعَدُ مِنَ الْمَكْتَبَةِ
-         </div>
-        </div>
-        <div style="text-align: center; padding: 15px; background: linear-gradient(135deg, #f3e5f5, #e1bee7); border-radius: 15px;">
-         <div style="font-size: 17px; color: #2c3e50; font-weight: 600;">
-          Rumah lebih jauh dari perpustakaan
-         </div>
-        </div>
-       </div>
-       <div style="background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-        <div style="text-align: center; margin-bottom: 20px;">
-         <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 30px; color: #4682B4; font-weight: 700; line-height: 1.8;">
-          الطَّعَامُ أَكْثَرُ
-         </div>
-        </div>
-        <div style="text-align: center; padding: 15px; background: linear-gradient(135deg, #e8f5e8, #c8e6c9); border-radius: 15px;">
-         <div style="font-size: 17px; color: #2c3e50; font-weight: 600;">
-          Makanan lebih banyak
-         </div>
-        </div>
-       </div>
-      </div><!-- Latihan Materi 3 -->
-      <div style="margin-top: 30px; text-align: center;"><button onclick="startQuiz('materi-3-latihan')" style="background: linear-gradient(135deg, #388e3c, #a5d6a7); color: white; border: none; padding: 18px 35px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(56, 142, 60, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(56, 142, 60, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(56, 142, 60, 0.3)'"> 🎯 Latihan Materi 3 </button>
-      </div>
-     </div>
-    </div><!-- Materi 4: Lagu dan Pembelajaran -->
-    <div id="materi-4" class="materi-content" style="display: none;">
-     <div class="back-navigation" style="margin-bottom: 30px;"><button onclick="backToMateriNavigation()" style="background: linear-gradient(135deg, #00A9B5, #4682B4); color: white; border: none; padding: 15px 30px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(0, 169, 181, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(0, 169, 181, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 169, 181, 0.3)'"> ← Kembali ke Menu Materi Bab 1 </button>
-     </div>
-     <div class="learning-tips" style="margin-bottom: 40px;">
-      <div class="tips-title" style="font-size: 32px; margin-bottom: 25px;">
-       🎵 Materi 4: Lagu &amp; Pembelajaran Isim Tafdhil
-      </div>
-      <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 25px;">
-       <div style="font-size: 20px; color: #333; line-height: 1.8; margin-bottom: 20px; text-align: center;">
-        Mari belajar Isim Tafdhil dengan cara yang menyenangkan melalui lagu dan aktivitas interaktif! Musik membantu kita mengingat pelajaran dengan lebih mudah.
-       </div>
-      </div><!-- Lagu Isim Tafdhil -->
-      <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 25px;">
-       <div style="font-size: 24px; color: #c2185b; font-weight: 800; margin-bottom: 20px; text-align: center;">
-        🎼 Lagu Isim Tafdhil
-       </div>
-       <div style="background: linear-gradient(135deg, #fce4ec, #f8bbd9); padding: 25px; border-radius: 15px; text-align: center; margin-bottom: 20px;">
-        <div style="font-size: 18px; color: #2c3e50; font-weight: 600; margin-bottom: 15px;">
-         🎵 (Nada: Bintang Kecil)
-        </div>
-        <div style="font-family: 'Noto Sans Arabic', sans-serif; font-size: 24px; color: #4682B4; font-weight: 700; line-height: 2; margin-bottom: 15px;">
-         أَطْوَلُ أَقْصَرُ أَكْبَرُ أَصْغَرُ<br>
-          أَكْثَرُ أَقَلُّ أَسْهَلُ أَصْعَبُ<br>
-          أَقْرَبُ أَبْعَدُ أَجْمَلُ أَقْبَحُ<br>
-          هَذَا إِسْمُ التَّفْضِيْلِ يَا أَحْبَابِي
-        </div>
-        <div style="font-size: 16px; color: #666; font-weight: 600; line-height: 1.8;">
-         Lebih panjang, lebih pendek, lebih besar, lebih kecil<br>
-          Lebih banyak, lebih sedikit, lebih mudah, lebih sulit<br>
-          Lebih dekat, lebih jauh, lebih indah, lebih jelek<br>
-          Inilah Isim Tafdhil wahai teman-temanku
-        </div>
-       </div>
-      </div><!-- Aktivitas Pembelajaran -->
-      <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 25px;">
-       <div style="font-size: 24px; color: #c2185b; font-weight: 800; margin-bottom: 20px; text-align: center;">
-        🎯 Aktivitas Pembelajaran Menyenangkan
-       </div>
-       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-        <div style="background: linear-gradient(135deg, #e1f5fe, #b3e5fc); padding: 20px; border-radius: 15px; text-align: center;">
-         <div style="font-size: 40px; margin-bottom: 15px;">
-          🎭
-         </div>
-         <h4 style="color: #0277bd; font-weight: 800; margin-bottom: 10px;">Bermain Peran</h4>
-         <p style="color: #666; font-size: 14px; line-height: 1.6;">Perankan perbandingan benda-benda di kelas menggunakan Isim Tafdhil. Contoh: "Meja ini أكبر dari kursi itu!"</p>
-        </div>
-        <div style="background: linear-gradient(135deg, #f3e5f5, #e1bee7); padding: 20px; border-radius: 15px; text-align: center;">
-         <div style="font-size: 40px; margin-bottom: 15px;">
-          🎨
-         </div>
-         <h4 style="color: #7b1fa2; font-weight: 800; margin-bottom: 10px;">Menggambar Perbandingan</h4>
-         <p style="color: #666; font-size: 14px; line-height: 1.6;">Gambar dua benda dan tulis Isim Tafdhil yang sesuai. Contoh: Gambar gajah dan semut, tulis "الفيل أكبر"</p>
-        </div>
-        <div style="background: linear-gradient(135deg, #fff3e0, #ffcc02); padding: 20px; border-radius: 15px; text-align: center;">
-         <div style="font-size: 40px; margin-bottom: 15px;">
-          🏃
-         </div>
-         <h4 style="color: #f57c00; font-weight: 800; margin-bottom: 10px;">Permainan Gerak</h4>
-         <p style="color: #666; font-size: 14px; line-height: 1.6;">Guru menyebutkan Isim Tafdhil, siswa menunjukkan gerakan yang sesuai. Contoh: "أطول" → angkat tangan tinggi-tinggi!</p>
-        </div>
-        <div style="background: linear-gradient(135deg, #e8f5e8, #c8e6c9); padding: 20px; border-radius: 15px; text-align: center;">
-         <div style="font-size: 40px; margin-bottom: 15px;">
-          🎪
-         </div>
-         <h4 style="color: #388e3c; font-weight: 800; margin-bottom: 10px;">Tebak-tebakan</h4>
-         <p style="color: #666; font-size: 14px; line-height: 1.6;">Guru menunjukkan dua benda, siswa berlomba menyebutkan Isim Tafdhil yang tepat. Yang tercepat dan benar mendapat poin!</p>
-        </div>
-       </div>
-      </div><!-- Tips Menghapal -->
-      <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-       <div style="font-size: 24px; color: #c2185b; font-weight: 800; margin-bottom: 20px; text-align: center;">
-        💡 Tips Menghapal Isim Tafdhil
-       </div>
-       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
-        <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px;"><span style="font-size: 28px;">🎵</span>
-         <p style="color: #666; font-size: 15px; margin: 0; font-weight: 600;">Nyanyikan lagu Isim Tafdhil setiap hari</p>
-        </div>
-        <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px;"><span style="font-size: 28px;">🔄</span>
-         <p style="color: #666; font-size: 15px; margin: 0; font-weight: 600;">Ulangi kosakata sambil melakukan aktivitas</p>
-        </div>
-        <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px;"><span style="font-size: 28px;">👥</span>
-         <p style="color: #666; font-size: 15px; margin: 0; font-weight: 600;">Berlatih bersama teman-teman di kelas</p>
-        </div>
-        <div style="display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px;"><span style="font-size: 28px;">📝</span>
-         <p style="color: #666; font-size: 15px; margin: 0; font-weight: 600;">Tulis kosakata di buku catatan khusus</p>
-        </div>
-       </div>
-      </div><!-- Latihan Materi 4 -->
-      <div style="margin-top: 30px; text-align: center;"><button onclick="startQuiz('materi-4-latihan')" style="background: linear-gradient(135deg, #c2185b, #f8bbd9); color: white; border: none; padding: 18px 35px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(194, 24, 91, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(194, 24, 91, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(194, 24, 91, 0.3)'"> 🎯 Latihan Materi 4 </button>
-      </div>
-     </div>
-    </div><!-- Latihan Akhir -->
-    <div id="latihan-akhir" class="materi-content" style="display: none;">
-     <div class="back-navigation" style="margin-bottom: 30px;"><button onclick="backToMateriNavigation()" style="background: linear-gradient(135deg, #00A9B5, #4682B4); color: white; border: none; padding: 15px 30px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(0, 169, 181, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(0, 169, 181, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 169, 181, 0.3)'"> ← Kembali ke Menu Materi Bab 1 </button>
-     </div>
-     <div class="learning-tips" style="margin-bottom: 40px;">
-      <div class="tips-title" style="font-size: 32px; margin-bottom: 25px;">
-       🏆 Latihan Akhir: Uji Semua Materi Isim Tafdhil
-      </div>
-      <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 25px;">
-       <div style="font-size: 20px; color: #333; line-height: 1.8; margin-bottom: 20px; text-align: center;">
-        Selamat! Kamu telah mempelajari semua materi Isim Tafdhil. Sekarang saatnya menguji pemahamanmu dengan latihan akhir yang mencakup semua materi.
-       </div>
-      </div><!-- Ringkasan Materi -->
-      <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 25px;">
-       <div style="font-size: 24px; color: #FF8C00; font-weight: 800; margin-bottom: 20px; text-align: center;">
-        📋 Ringkasan Materi yang Telah Dipelajari
-       </div>
-       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-        <div style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); padding: 20px; border-radius: 15px; text-align: center;">
-         <div style="font-size: 40px; margin-bottom: 15px;">
-          📖
-         </div>
-         <h4 style="color: #1976d2; font-weight: 800; margin-bottom: 10px;">Materi 1</h4>
-         <p style="color: #666; font-size: 14px; line-height: 1.6;">Pengertian Isim Tafdhil dan ciri-cirinya: tidak menggunakan tanwin, tidak terikat gender, pola أَفْعَلُ</p>
-        </div>
-        <div style="background: linear-gradient(135deg, #fff3e0, #ffcc02); padding: 20px; border-radius: 15px; text-align: center;">
-         <div style="font-size: 40px; margin-bottom: 15px;">
-          📚
-         </div>
-         <h4 style="color: #f57c00; font-weight: 800; margin-bottom: 10px;">Materi 2</h4>
-         <p style="color: #666; font-size: 14px; line-height: 1.6;">Kosakata Isim Tafdhil: أطول، أقصر، أكبر، أصغر، أكثر، أقل، أسهل، أصعب, dan lainnya</p>
-        </div>
-        <div style="background: linear-gradient(135deg, #e8f5e8, #a5d6a7); padding: 20px; border-radius: 15px; text-align: center;">
-         <div style="font-size: 40px; margin-bottom: 15px;">
-          💬
-         </div>
-         <h4 style="color: #388e3c; font-weight: 800; margin-bottom: 10px;">Materi 3</h4>
-         <p style="color: #666; font-size: 14px; line-height: 1.6;">Contoh kalimat menggunakan Isim Tafdhil dalam konteks sehari-hari dan perbandingan</p>
-        </div>
-        <div style="background: linear-gradient(135deg, #fce4ec, #f8bbd9); padding: 20px; border-radius: 15px; text-align: center;">
-         <div style="font-size: 40px; margin-bottom: 15px;">
-          🎵
-         </div>
-         <h4 style="color: #c2185b; font-weight: 800; margin-bottom: 10px;">Materi 4</h4>
-         <p style="color: #666; font-size: 14px; line-height: 1.6;">Lagu Isim Tafdhil dan aktivitas pembelajaran yang menyenangkan untuk menghapal</p>
-        </div>
-       </div>
-      </div><!-- Tombol Latihan Akhir -->
-      <div style="text-align: center;">
-       <div style="background: linear-gradient(135deg, #FF8C00, #FFD700); padding: 40px; border-radius: 25px; box-shadow: 0 15px 50px rgba(255, 140, 0, 0.3); margin-bottom: 30px;">
-        <div style="font-size: 60px; margin-bottom: 20px;">
-         🏆
-        </div>
-        <h3 style="color: white; font-weight: 800; margin-bottom: 15px; font-size: 28px;">Siap untuk Tantangan Akhir?</h3>
-        <p style="color: white; font-size: 18px; margin-bottom: 25px; opacity: 0.9; line-height: 1.6;">Latihan ini akan menguji semua yang telah kamu pelajari tentang Isim Tafdhil. Tunjukkan kemampuan terbaikmu!</p><button onclick="startQuiz('latihan-akhir-semua')" style="background: white; color: #FF8C00; border: none; padding: 20px 40px; font-size: 20px; font-weight: 800; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px) scale(1.05)'; this.style.boxShadow='0 12px 35px rgba(0, 0, 0, 0.3)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.2)'"> 🚀 Mulai Latihan Akhir </button>
-       </div>
-      </div>
-     </div>
-    </div><!-- Bottom Navigation -->
-    <div class="bottom-navigation" style="margin-top: 50px; text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.95); border-radius: 25px; box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);">
-     <div style="margin-bottom: 20px;">
-      <div style="font-size: 48px; margin-bottom: 15px;">
-       🎉
-      </div>
-      <h3 style="font-size: 24px; font-weight: 800; color: #00A9B5; margin-bottom: 10px;">Selamat! Kamu telah menyelesaikan materi Isim Tafdhil</h3>
-      <p style="font-size: 18px; color: #666; margin-bottom: 25px;">Lanjutkan petualangan belajarmu dengan materi lainnya!</p>
-     </div>
-     <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;"><button class="back-button" onclick="backToMateriNavigation()" style="background: linear-gradient(135deg, #00A9B5, #4682B4); color: white; border: none; padding: 18px 35px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(0, 169, 181, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(0, 169, 181, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 169, 181, 0.3)'"> 📚 Kembali ke Menu Materi Bab 1 </button> <button onclick="showSection('beranda')" style="background: linear-gradient(135deg, #FF8C00, #FFD700); color: white; border: none; padding: 18px 35px; font-size: 18px; font-weight: 600; border-radius: 50px; cursor: pointer; box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3); transition: all 0.3s; font-family: 'Nunito', sans-serif;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(255, 140, 0, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(255, 140, 0, 0.3)'"> 🏠 Kembali ke Beranda </button>
-     </div>
-    </div>
    </section><!-- Footer -->
    <footer class="footer">
     <div class="footer-content">
      <div class="footer-section">
-      <h4>🌟 Portal Petualang Bahasa Arab</h4>
-      <p>Platform pembelajaran bahasa Arab yang interaktif dan menyenangkan untuk siswa kelas 5 SD. Belajar sambil bermain dengan Hud-hud, si burung cerdas!</p>
+      <h4>🎯 Tentang Portal</h4>
+      <p>Portal Petualang Bahasa Arab adalah platform pembelajaran interaktif yang dirancang khusus untuk membuat belajar bahasa Arab menjadi menyenangkan dan mudah dipahami.</p>
      </div>
      <div class="footer-section">
-      <h4>📚 Materi Pembelajaran</h4>
+      <h4>📚 Materi Tersedia</h4>
       <ul>
-       <li>✨ Kosa kata harian</li>
-       <li>✨ Tata bahasa dasar</li>
-       <li>✨ Pelafalan yang benar</li>
-       <li>✨ Budaya Arab</li>
-       <li>✨ Kuis interaktif</li>
+       <li>🏆 Isim Tafdhil (Kata Perbandingan)</li>
+       <li>🔷 Bentuk Geometri</li>
+       <li>🌈 Warna-warna</li>
+       <li>🌙 Kalender Hijriah</li>
       </ul>
      </div>
      <div class="footer-section">
-      <h4>🎯 Fitur Unggulan</h4>
+      <h4>🎮 Fitur Unggulan</h4>
       <ul>
-       <li>🎮 Game edukatif</li>
-       <li>🏆 Sistem reward</li>
-       <li>🔊 Audio pelafalan</li>
-       <li>📱 Mobile friendly</li>
-       <li>👥 Belajar bersama</li>
+       <li>📱 Responsif di semua perangkat</li>
+       <li>🎵 Audio pelafalan native</li>
+       <li>🏆 Sistem reward dan badge</li>
+       <li>👥 Mode belajar kolaboratif</li>
       </ul>
-     </div>
-     <div class="footer-section">
-      <h4>📞 Dukungan</h4>
-      <p>Jika ada pertanyaan atau kesulitan dalam menggunakan platform ini, silakan hubungi guru bahasa Arab di sekolah atau minta bantuan orang tua.</p>
      </div>
     </div>
     <div class="footer-bottom">
-     <p>© 2024 Portal Petualang Bahasa Arab - Belajar Bahasa Arab dengan Menyenangkan! 🌟</p>
+     <p>© 2024 Portal Petualang Bahasa Arab - Belajar dengan Cinta dan Semangat! 🌟</p>
     </div>
    </footer>
   </div>
   <script>
-        // Configuration for editable elements
-        const defaultConfig = {
-            website_title: "Portal Petualang Bahasa Arab",
-            greeting_text: "Assalamu'alaikum",
-            student_name: "Petualang",
-            hero_subtitle: "Siap berpetualang hari ini?",
-            cta_button: "🚀 Ayo Mulai Belajar!",
-            nav_home: "🏠 Beranda",
-            nav_guide: "📋 Petunjuk Penggunaan", 
-            nav_map: "🗺️ Peta Belajar",
-            nav_material: "📚 Materi",
-            nav_exercise: "🎯 Latihan",
-            primary_color: "#00A9B5",
-            secondary_color: "#4682B4",
-            accent_color: "#FF8C00",
-            background_start: "#87CEEB",
-            background_middle: "#00A9B5",
-            background_end: "#4682B4"
-        };
+        // Global variables
+        let currentStudentName = '';
 
-        // Update UI based on config changes
-        async function onConfigChange(config) {
-            // Update text content
-            const websiteTitle = document.getElementById('website-title');
-            if (websiteTitle) websiteTitle.textContent = config.website_title || defaultConfig.website_title;
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+            setupNameInput();
+            updateGreeting();
+        });
+
+        function initializeApp() {
+            // Show beranda section by default
+            showSection('beranda');
             
-            const greetingText = document.getElementById('greeting-text');
-            if (greetingText) greetingText.textContent = config.greeting_text || defaultConfig.greeting_text;
+            // Update greeting based on time
+            updateGreeting();
             
-            const studentName = document.getElementById('student-name');
-            if (studentName) studentName.textContent = config.student_name || defaultConfig.student_name;
-            
-            const heroSubtitle = document.getElementById('hero-subtitle');
-            if (heroSubtitle) heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
-            
+            // Setup name input functionality
+            setupNameInput();
+        }
+
+        function setupNameInput() {
+            const nameInput = document.getElementById('student-name-input');
+            const studentNameSpan = document.getElementById('student-name');
             const ctaButton = document.getElementById('cta-button');
-            if (ctaButton) ctaButton.textContent = config.cta_button || defaultConfig.cta_button;
             
-            // Update navigation
-            const navHome = document.getElementById('nav-home');
-            if (navHome) navHome.textContent = config.nav_home || defaultConfig.nav_home;
-            
-            const navGuide = document.getElementById('nav-guide');
-            if (navGuide) navGuide.textContent = config.nav_guide || defaultConfig.nav_guide;
-            
-            const navMap = document.getElementById('nav-map');
-            if (navMap) navMap.textContent = config.nav_map || defaultConfig.nav_map;
-            
-            const navMaterial = document.getElementById('nav-material');
-            if (navMaterial) navMaterial.textContent = config.nav_material || defaultConfig.nav_material;
-            
-            const navExercise = document.getElementById('nav-exercise');
-            if (navExercise) navExercise.textContent = config.nav_exercise || defaultConfig.nav_exercise;
+            if (nameInput) {
+                nameInput.addEventListener('input', function() {
+                    const name = this.value.trim();
+                    currentStudentName = name;
+                    
+                    if (name) {
+                        studentNameSpan.textContent = name;
+                        ctaButton.innerHTML = `🚀 Ayo ${name}, Mulai Belajar!`;
+                    } else {
+                        studentNameSpan.textContent = 'Petualang';
+                        ctaButton.innerHTML = '🚀 Ayo Mulai Belajar!';
+                    }
+                });
+            }
+        }
 
-            // Update colors
-            const primaryColor = config.primary_color || defaultConfig.primary_color;
-            const secondaryColor = config.secondary_color || defaultConfig.secondary_color;
-            const accentColor = config.accent_color || defaultConfig.accent_color;
-            const bgStart = config.background_start || defaultConfig.background_start;
-            const bgMiddle = config.background_middle || defaultConfig.background_middle;
-            const bgEnd = config.background_end || defaultConfig.background_end;
-
-            // Update background gradient
-            document.body.style.background = `linear-gradient(135deg, ${bgStart} 0%, ${bgMiddle} 50%, ${bgEnd} 100%)`;
+        function updateGreeting() {
+            const greetingElement = document.getElementById('greeting-text');
+            const now = new Date();
+            const hour = now.getHours();
             
-            // Update primary color elements
-            const greeting = document.querySelector('.greeting');
-            if (greeting) greeting.style.color = primaryColor;
+            let greeting = 'Assalamu\'alaikum';
             
-            const sectionTitles = document.querySelectorAll('.section-title');
-            sectionTitles.forEach(title => title.style.color = primaryColor);
-            
-            const stepTitles = document.querySelectorAll('.step-title');
-            stepTitles.forEach(title => title.style.color = primaryColor);
-            
-            // Update secondary color elements
-            const arabicGreeting = document.querySelector('.arabic-greeting');
-            if (arabicGreeting) arabicGreeting.style.color = secondaryColor;
-            
-            // Update accent color elements
-            const ctaBtn = document.querySelector('.cta-button');
-            if (ctaBtn) {
-                ctaBtn.style.background = `linear-gradient(135deg, ${accentColor}, #FFD700)`;
+            if (hour >= 5 && hour < 11) {
+                greeting = 'Selamat Pagi';
+            } else if (hour >= 11 && hour < 15) {
+                greeting = 'Selamat Siang';
+            } else if (hour >= 15 && hour < 18) {
+                greeting = 'Selamat Sore';
+            } else {
+                greeting = 'Selamat Malam';
             }
             
-            const stepNumbers = document.querySelectorAll('.step-number');
-            stepNumbers.forEach(num => {
-                num.style.background = `linear-gradient(135deg, ${accentColor}, #FFD700)`;
+            if (greetingElement) {
+                greetingElement.textContent = greeting;
+            }
+        }
+
+        function showSection(sectionId) {
+            // Hide all main sections
+            const sections = document.querySelectorAll('.main-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
             });
             
-            // Update interactive cards
-            const interactiveCards = document.querySelectorAll('.interactive-card');
-            interactiveCards.forEach(card => {
-                card.style.background = `linear-gradient(135deg, ${primaryColor}, ${secondaryColor})`;
-            });
+            // Show the requested section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
         }
 
-        // Map configuration to capabilities for color editing
-        function mapToCapabilities(config) {
-            return {
-                recolorables: [
-                    {
-                        get: () => config.background_start || defaultConfig.background_start,
-                        set: (value) => {
-                            if (window.elementSdk) {
-                                window.elementSdk.config.background_start = value;
-                                window.elementSdk.setConfig({ background_start: value });
-                            }
-                        }
-                    },
-                    {
-                        get: () => config.background_middle || defaultConfig.background_middle,
-                        set: (value) => {
-                            if (window.elementSdk) {
-                                window.elementSdk.config.background_middle = value;
-                                window.elementSdk.setConfig({ background_middle: value });
-                            }
-                        }
-                    },
-                    {
-                        get: () => config.primary_color || defaultConfig.primary_color,
-                        set: (value) => {
-                            if (window.elementSdk) {
-                                window.elementSdk.config.primary_color = value;
+        function showTimelineDetail(babId) {
+            if (babId === 'isim-tafdhil') {
+                // This bab is available, show the content
+                showSection('bab-isim-tafdhil');
+                showInlineMessage('🎉 Membuka Bab 1: Isim Tafdhil! Selamat belajar!', 'success');
+            } else {
+                showLockedMessage(babId);
+            }
+        }
+
+        function showLockedMessage(babId) {
+            const messages = {
+                'bentuk': 'Bab 2: Bentuk masih terkunci! Selesaikan Bab 1 terlebih dahulu. 🔒',
+                'warna': 'Bab 3: Warna masih terkunci! Selesaikan bab sebelumnya terlebih dahulu. 🔒',
+                'kalender-hijriah': 'Bab 4: Kalender Hijriah masih terkunci! Selesaikan bab sebelumnya terlebih dahulu. 🔒'
+            };
+            
+            const message = messages[babId] || 'Bab ini masih terkunci! 🔒';
+            showInlineMessage(message, 'warning');
+        }
+
+        function showMateriDetail(materiId) {
+            if (materiId === 'pengertian') {
+                showMateriPengertian();
+            } else if (materiId === 'mufradat') {
+                showMateriMufradat();
+            } else if (materiId === 'kalimat') {
+                showMateriKalimat();
+            } else if (materiId === 'latihan') {
+                showMateriLatihan();
+            }
+        }
+
+        function showMateriPengertian() {
+            showInlineMessage('📖 Membuka Materi 1: Pengertian & Ciri-ciri Isim Tafdhil!', 'success');
+            
+            // Create detailed content for Materi 1
+            const materiContent = `
+                <div class="materi-content-detail">
+                    <div class="back-navigation">
+                        <button class="back-button" onclick="resetBabIsimTafdhil()">
+                            ← Kembali ke Bab 1
+                        </button>
+                    </div>
+                    
+                    <h2 class="section-title" style="color: #00A9B5 !important;">📖 Materi 1: Pengertian & Ciri-ciri</h2>
+                    <div class="arabic-greeting" style="text-align: center; margin-bottom: 30px;">مَا هُوَ الاِسْمُ التَّفْضِيْلِ؟</div>
+                    
+                    <div class="materi-card">
+                        <div class="materi-header">
+                            <h3>🎯 Pengertian Isim Tafdhil</h3>
+                        </div>
+                        <div class="materi-body">
+                            <p class="definition-text">
+                                <strong>Isim Tafdhil</strong> adalah kata yang memiliki makna <strong>"lebih"</strong> atau <strong>"paling"</strong> 
+                                yang mengikuti pola <span class="arabic-text">أَفْعَلُ</span> (af'alu).
+                            </p>
+                            <div class="example-box">
+                                <h4>💡 Contoh Sederhana:</h4>
+                                <div class="example-item">
+                                    <span class="arabic-example">أَكْبَرُ</span>
+                                    <span class="meaning">= lebih besar / paling besar</span>
+                                </div>
+                                <div class="example-item">
+                                    <span class="arabic-example">أَطْوَلُ</span>
+                                    <span class="meaning">= lebih panjang / paling panjang</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="materi-card">
+                        <div class="materi-header">
+                            <h3>📋 Ciri-ciri Khusus Isim Tafdhil</h3>
+                        </div>
+                        <div class="materi-body">
+                            <div class="ciri-list">
+                                <div class="ciri-item">
+                                    <div class="ciri-number">1</div>
+                                    <div class="ciri-content">
+                                        <h4>🚫 Tidak Pernah Menggunakan Tanwin</h4>
+                                        <p>Isim Tafdhil dengan pola <span class="arabic-text">أَفْعَلُ</span> tidak pernah menggunakan tanwin dalam keadaan apapun.</p>
+                                        <div class="example-comparison">
+                                            <div class="correct">✅ <span class="arabic-text">أَكْبَرُ</span> (benar)</div>
+                                            <div class="incorrect">❌ <span class="arabic-text">أَكْبَرٌ</span> (salah)</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ciri-item">
+                                    <div class="ciri-number">2</div>
+                                    <div class="ciri-content">
+                                        <h4>🔄 Tidak Terikat dengan Jenis Isim</h4>
+                                        <p>Isim Tafdhil tidak terikat dengan jenis (mudzakkar/muannats) isim yang disifati.</p>
+                                        <div class="example-comparison">
+                                            <div class="example-pair">
+                                                <span class="arabic-text">المَكْتَبُ أَكْبَرُ</span>
+                                                <span class="meaning">(meja lebih besar - mudzakkar)</span>
+                                            </div>
+                                            <div class="example-pair">
+                                                <span class="arabic-text">المَدْرَسَةُ أَكْبَرُ</span>
+                                                <span class="meaning">(sekolah lebih besar - muannats)</span>
+                                            </div>
+                                        </div>
+                                        <p class="note">💡 Perhatikan: <span class="arabic-text">أَكْبَرُ</span> tetap sama untuk keduanya!</p>
+                                    </div>
+                                </div>
+
+                                <div class="ciri-item">
+                                    <div class="ciri-number">3</div>
+                                    <div class="ciri-content">
+                                        <h4>📐 Mengikuti Pola أَفْعَلُ</h4>
+                                        <p>Semua Isim Tafdhil mengikuti pola dasar <span class="arabic-text">أَفْعَلُ</span> (af'alu).</p>
+                                        <div class="pattern-box">
+                                            <div class="pattern-title">Rumus Pembentukan:</div>
+                                            <div class="pattern-formula">
+                                                <span class="arabic-text">أَ + ف + ع + ل + ُ</span>
+                                                <br>
+                                                <small>(Alif + Fa + Ain + Lam + Dhammah)</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-section">
+                        <h3>🎯 Progress Belajar</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%;"></div>
+                        </div>
+                        <p class="progress-text">Materi 1 dari 4 selesai (25%)</p>
+                        <button class="next-button" onclick="showMateriMufradat()">
+                            Lanjut ke Materi 2: Contoh Mufradat →
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            // Replace the current section content
+            const babSection = document.getElementById('bab-isim-tafdhil');
+            babSection.innerHTML = materiContent;
+        }
+
+        function showMateriMufradat() {
+            showInlineMessage('📝 Membuka Materi 2: Contoh Mufradat!', 'success');
+            
+            // Create detailed content for Materi 2
+            const materiContent = `
+                <div class="materi-content-detail">
+                    <div class="back-navigation">
+                        <button class="back-button" onclick="resetBabIsimTafdhil()">
+                            ← Kembali ke Bab 1
+                        </button>
+                    </div>
+                    
+                    <h2 class="section-title" style="color: #00A9B5 !important;">📝 Materi 2: Contoh Mufradat</h2>
+                    <div class="arabic-greeting" style="text-align: center; margin-bottom: 30px;">أَمْثِلَةُ المُفْرَدَاتِ</div>
+                    
+                    <div class="materi-card">
+                        <div class="materi-header">
+                            <h3>📚 Kosakata Isim Tafdhil</h3>
+                            <p>Pelajari 10 kosakata Isim Tafdhil yang sering digunakan dalam kehidupan sehari-hari</p>
+                        </div>
+                        <div class="materi-body">
+                            <div class="vocabulary-grid">
+                                <div class="vocab-card">
+                                    <div class="vocab-number">1</div>
+                                    <div class="vocab-content">
+                                        <div class="vocab-pair">
+                                            <div class="original-word">
+                                                <span class="arabic-text">طَوِيْلٌ</span>
+                                                <span class="meaning">panjang</span>
+                                            </div>
+                                            <div class="arrow">→</div>
+                                            <div class="tafdhil-word">
+                                                <span class="arabic-text">أَطْوَلُ</span>
+                                                <span class="meaning">lebih panjang</span>
+                                            </div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('atwalu')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="vocab-card">
+                                    <div class="vocab-number">2</div>
+                                    <div class="vocab-content">
+                                        <div class="vocab-pair">
+                                            <div class="original-word">
+                                                <span class="arabic-text">قَصِيْرٌ</span>
+                                                <span class="meaning">pendek</span>
+                                            </div>
+                                            <div class="arrow">→</div>
+                                            <div class="tafdhil-word">
+                                                <span class="arabic-text">أَقْصَرُ</span>
+                                                <span class="meaning">lebih pendek</span>
+                                            </div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('aqsaru')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="vocab-card">
+                                    <div class="vocab-number">3</div>
+                                    <div class="vocab-content">
+                                        <div class="vocab-pair">
+                                            <div class="original-word">
+                                                <span class="arabic-text">كَبِيْرٌ</span>
+                                                <span class="meaning">besar</span>
+                                            </div>
+                                            <div class="arrow">→</div>
+                                            <div class="tafdhil-word">
+                                                <span class="arabic-text">أَكْبَرُ</span>
+                                                <span class="meaning">lebih besar</span>
+                                            </div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('akbaru')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="vocab-card">
+                                    <div class="vocab-number">4</div>
+                                    <div class="vocab-content">
+                                        <div class="vocab-pair">
+                                            <div class="original-word">
+                                                <span class="arabic-text">صَغِيْرٌ</span>
+                                                <span class="meaning">kecil</span>
+                                            </div>
+                                            <div class="arrow">→</div>
+                                            <div class="tafdhil-word">
+                                                <span class="arabic-text">أَصْغَرُ</span>
+                                                <span class="meaning">lebih kecil</span>
+                                            </div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('asgharu')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="vocab-card">
+                                    <div class="vocab-number">5</div>
+                                    <div class="vocab-content">
+                                        <div class="vocab-pair">
+                                            <div class="original-word">
+                                                <span class="arabic-text">كَثِيْرٌ</span>
+                                                <span class="meaning">banyak</span>
+                                            </div>
+                                            <div class="arrow">→</div>
+                                            <div class="tafdhil-word">
+                                                <span class="arabic-text">أَكْثَرُ</span>
+                                                <span class="meaning">lebih banyak</span>
+                                            </div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('aktsaru')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="vocab-card">
+                                    <div class="vocab-number">6</div>
+                                    <div class="vocab-content">
+                                        <div class="vocab-pair">
+                                            <div class="original-word">
+                                                <span class="arabic-text">عَمِيْقٌ</span>
+                                                <span class="meaning">dalam</span>
+                                            </div>
+                                            <div class="arrow">→</div>
+                                            <div class="tafdhil-word">
+                                                <span class="arabic-text">أَعْمَقُ</span>
+                                                <span class="meaning">lebih dalam</span>
+                                            </div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('a3maqu')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="vocab-card">
+                                    <div class="vocab-number">7</div>
+                                    <div class="vocab-content">
+                                        <div class="vocab-pair">
+                                            <div class="original-word">
+                                                <span class="arabic-text">سَهْلٌ</span>
+                                                <span class="meaning">mudah</span>
+                                            </div>
+                                            <div class="arrow">→</div>
+                                            <div class="tafdhil-word">
+                                                <span class="arabic-text">أَسْهَلُ</span>
+                                                <span class="meaning">lebih mudah</span>
+                                            </div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('ashalu')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="vocab-card">
+                                    <div class="vocab-number">8</div>
+                                    <div class="vocab-content">
+                                        <div class="vocab-pair">
+                                            <div class="original-word">
+                                                <span class="arabic-text">بَعِيْدٌ</span>
+                                                <span class="meaning">jauh</span>
+                                            </div>
+                                            <div class="arrow">→</div>
+                                            <div class="tafdhil-word">
+                                                <span class="arabic-text">أَبْعَدُ</span>
+                                                <span class="meaning">lebih jauh</span>
+                                            </div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('ab3adu')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="vocab-card">
+                                    <div class="vocab-number">9</div>
+                                    <div class="vocab-content">
+                                        <div class="vocab-pair">
+                                            <div class="original-word">
+                                                <span class="arabic-text">قَرِيْبٌ</span>
+                                                <span class="meaning">dekat</span>
+                                            </div>
+                                            <div class="arrow">→</div>
+                                            <div class="tafdhil-word">
+                                                <span class="arabic-text">أَقْرَبُ</span>
+                                                <span class="meaning">lebih dekat</span>
+                                            </div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('aqrabu')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="vocab-card">
+                                    <div class="vocab-number">10</div>
+                                    <div class="vocab-content">
+                                        <div class="vocab-pair">
+                                            <div class="original-word">
+                                                <span class="arabic-text">ضَعِيْفٌ</span>
+                                                <span class="meaning">lemah</span>
+                                            </div>
+                                            <div class="arrow">→</div>
+                                            <div class="tafdhil-word">
+                                                <span class="arabic-text">أَضْعَفُ</span>
+                                                <span class="meaning">lebih lemah</span>
+                                            </div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('ad3afu')">🔊</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="materi-card">
+                        <div class="materi-header">
+                            <h3>🎵 Lagu Mufradat Isim Tafdhil</h3>
+                            <p>Belajar sambil bernyanyi! Tonton video lagu yang membantu menghafal kosakata Isim Tafdhil</p>
+                        </div>
+                        <div class="materi-body">
+                            <div style="text-align: center; margin: 20px 0;">
+                                <div style="background: linear-gradient(135deg, #FF8C00, #FFD700); border-radius: 20px; padding: 30px; margin: 20px 0; box-shadow: 0 15px 40px rgba(255, 140, 0, 0.3);">
+                                    <h4 style="color: white; margin-bottom: 20px; font-size: 22px;">🎼 Video Lagu Pembelajaran</h4>
+                                    <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; background: white; border-radius: 15px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                                        <iframe 
+                                            width="100%" 
+                                            height="315" 
+                                            src="https://www.youtube.com/embed/CNvvsR0FtVA?si=dtEeWz6nm_uxpbGW" 
+                                            title="Lagu Mufradat Isim Tafdhil" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen
+                                            style="border-radius: 10px;">
+                                        </iframe>
+                                        <p style="margin-top: 15px; color: #666; font-weight: 600; font-size: 16px;">
+                                            🎯 Dengarkan lagu ini sambil mengikuti liriknya untuk membantu menghafal kosakata!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="learning-tip-box">
+                        <h4>💡 Tips Menghafal:</h4>
+                        <ul>
+                            <li>🔄 Ulangi pelafalan setiap kata 3-5 kali</li>
+                            <li>📝 Tulis kata-kata ini di buku catatan</li>
+                            <li>🎯 Fokus pada pola <span class="arabic-text">أَفْعَلُ</span></li>
+                            <li>🗣️ Praktikkan dengan teman atau keluarga</li>
+                            <li>🎵 Nyanyikan lagu di atas untuk membantu mengingat</li>
+                        </ul>
+                    </div>
+
+                    <div class="progress-section">
+                        <h3>🎯 Progress Belajar</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 50%;"></div>
+                        </div>
+                        <p class="progress-text">Materi 2 dari 4 selesai (50%)</p>
+                        <div class="navigation-buttons">
+                            <button class="prev-button" onclick="showMateriPengertian()">
+                                ← Materi 1: Pengertian
+                            </button>
+                            <button class="next-button" onclick="showMateriKalimat()">
+                                Lanjut ke Materi 3: Contoh Kalimat →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Replace the current section content
+            const babSection = document.getElementById('bab-isim-tafdhil');
+            babSection.innerHTML = materiContent;
+        }
+
+        function showMateriKalimat() {
+            showInlineMessage('💬 Membuka Materi 3: Contoh Kalimat!', 'success');
+            
+            // Create detailed content for Materi 3
+            const materiContent = `
+                <div class="materi-content-detail">
+                    <div class="back-navigation">
+                        <button class="back-button" onclick="resetBabIsimTafdhil()">
+                            ← Kembali ke Bab 1
+                        </button>
+                    </div>
+                    
+                    <h2 class="section-title" style="color: #00A9B5 !important;">💬 Materi 3: Contoh Kalimat</h2>
+                    <div class="arabic-greeting" style="text-align: center; margin-bottom: 30px;">أَمْثِلَةُ الجُمَلِ</div>
+                    
+                    <div class="materi-card">
+                        <div class="materi-header">
+                            <h3>📝 Penggunaan Isim Tafdhil dalam Kalimat</h3>
+                            <p>Pelajari cara menggunakan Isim Tafdhil dalam kalimat sehari-hari dengan berbagai contoh praktis</p>
+                        </div>
+                        <div class="materi-body">
+                            <div class="example-box">
+                                <h4>🏠 Contoh Kalimat Sehari-hari:</h4>
+                                
+                                <div class="sentence-group">
+                                    <h5>1️⃣ Membandingkan Ukuran (Size)</h5>
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">هَذَا البَيْتُ أَكْبَرُ مِنْ ذَلِكَ البَيْتِ</div>
+                                        <div class="sentence-meaning">Rumah ini lebih besar dari rumah itu</div>
+                                        <button class="audio-btn" onclick="playAudio('sentence1')">🔊</button>
+                                    </div>
+                                    
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">القَلَمُ أَطْوَلُ مِنَ المِمْحَاةِ</div>
+                                        <div class="sentence-meaning">Pulpen lebih panjang dari penghapus</div>
+                                        <button class="audio-btn" onclick="playAudio('sentence2')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="sentence-group">
+                                    <h5>2️⃣ Membandingkan Jarak (Distance)</h5>
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">المَسْجِدُ أَقْرَبُ مِنَ المَدْرَسَةِ</div>
+                                        <div class="sentence-meaning">Masjid lebih dekat dari sekolah</div>
+                                        <button class="audio-btn" onclick="playAudio('sentence3')">🔊</button>
+                                    </div>
+                                    
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">السُّوْقُ أَبْعَدُ مِنَ البَيْتِ</div>
+                                        <div class="sentence-meaning">Pasar lebih jauh dari rumah</div>
+                                        <button class="audio-btn" onclick="playAudio('sentence4')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="sentence-group">
+                                    <h5>3️⃣ Membandingkan Kemudahan (Difficulty)</h5>
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">هَذَا الدَّرْسُ أَسْهَلُ مِنْ ذَلِكَ الدَّرْسِ</div>
+                                        <div class="sentence-meaning">Pelajaran ini lebih mudah dari pelajaran itu</div>
+                                        <button class="audio-btn" onclick="playAudio('sentence5')">🔊</button>
+                                    </div>
+                                    
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">الرِّيَاضِيَّاتُ أَصْعَبُ مِنَ التَّارِيْخِ</div>
+                                        <div class="sentence-meaning">Matematika lebih sulit dari sejarah</div>
+                                        <button class="audio-btn" onclick="playAudio('sentence6')">🔊</button>
+                                    </div>
+                                </div>
+
+                                <div class="sentence-group">
+                                    <h5>4️⃣ Membandingkan Jumlah (Quantity)</h5>
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">الطُّلَّابُ أَكْثَرُ مِنَ المُدَرِّسِيْنَ</div>
+                                        <div class="sentence-meaning">Siswa lebih banyak dari guru</div>
+                                        <button class="audio-btn" onclick="playAudio('sentence7')">🔊</button>
+                                    </div>
+                                    
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">الكُتُبُ أَقَلُّ مِنَ الأَقْلَامِ</div>
+                                        <div class="sentence-meaning">Buku lebih sedikit dari pulpen</div>
+                                        <button class="audio-btn" onclick="playAudio('sentence8')">🔊</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="materi-card">
+                        <div class="materi-header">
+                            <h3>🔍 Analisis Struktur Kalimat</h3>
+                        </div>
+                        <div class="materi-body">
+                            <div class="structure-analysis">
+                                <h4>📐 Pola Kalimat Isim Tafdhil:</h4>
+                                <div class="pattern-box">
+                                    <div class="pattern-formula">
+                                        <span class="arabic-text">اسم + أفعل + مِنْ + اسم</span>
+                                        <br>
+                                        <small>(Isim 1 + Isim Tafdhil + Min + Isim 2)</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="analysis-example">
+                                    <h5>💡 Contoh Analisis:</h5>
+                                    <div class="breakdown-card">
+                                        <div class="arabic-sentence">هَذَا البَيْتُ أَكْبَرُ مِنْ ذَلِكَ البَيْتِ</div>
+                                        <div class="breakdown-parts">
+                                            <div class="part-item">
+                                                <span class="part-arabic">هَذَا البَيْتُ</span>
+                                                <span class="part-function">Mubtada (Subjek)</span>
+                                                <span class="part-meaning">Rumah ini</span>
+                                            </div>
+                                            <div class="part-item">
+                                                <span class="part-arabic">أَكْبَرُ</span>
+                                                <span class="part-function">Isim Tafdhil (Khabar)</span>
+                                                <span class="part-meaning">lebih besar</span>
+                                            </div>
+                                            <div class="part-item">
+                                                <span class="part-arabic">مِنْ</span>
+                                                <span class="part-function">Harf Jar</span>
+                                                <span class="part-meaning">dari</span>
+                                            </div>
+                                            <div class="part-item">
+                                                <span class="part-arabic">ذَلِكَ البَيْتِ</span>
+                                                <span class="part-function">Majrur</span>
+                                                <span class="part-meaning">rumah itu</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="materi-card">
+                        <div class="materi-header">
+                            <h3>📐 Pola Kalimat dengan لَكِنَّ (Lakin)</h3>
+                        </div>
+                        <div class="materi-body">
+                            <div class="structure-analysis">
+                                <h4>🔗 Menggabungkan Perbandingan dengan لَكِنَّ:</h4>
+                                <div class="pattern-box">
+                                    <div class="pattern-formula">
+                                        <span class="arabic-text">اسم + صفة + لَكِنَّ + اسم + أفعل</span>
+                                        <br>
+                                        <small>(Isim + Sifat + Lakin + Isim + Isim Tafdhil)</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="example-box">
+                                    <h4>💡 Contoh Penggunaan لَكِنَّ:</h4>
+                                    
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">هَذَا الكِتَابُ جَمِيْلٌ لَكِنَّ ذَلِكَ الكِتَابَ أَجْمَلُ</div>
+                                        <div class="sentence-meaning">Buku ini bagus, tetapi buku itu lebih bagus</div>
+                                        <button class="audio-btn" onclick="playAudio('lakin1')">🔊</button>
+                                    </div>
+                                    
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">المَدْرَسَةُ قَرِيْبَةٌ لَكِنَّ المَسْجِدَ أَقْرَبُ</div>
+                                        <div class="sentence-meaning">Sekolah dekat, tetapi masjid lebih dekat</div>
+                                        <button class="audio-btn" onclick="playAudio('lakin2')">🔊</button>
+                                    </div>
+                                    
+                                    <div class="sentence-card">
+                                        <div class="arabic-sentence">الطَّعَامُ لَذِيْذٌ لَكِنَّ الحَلْوَى أَلَذُّ</div>
+                                        <div class="sentence-meaning">Makanan enak, tetapi kue lebih enak</div>
+                                        <button class="audio-btn" onclick="playAudio('lakin3')">🔊</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="note">
+                                    💡 <strong>Catatan:</strong> لَكِنَّ digunakan untuk menunjukkan kontras atau perbedaan antara dua hal, 
+                                    dimana yang kedua memiliki sifat yang lebih menonjol.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="materi-card">
+                        <div class="materi-header">
+                            <h3>🗣️ Dialog Percakapan</h3>
+                        </div>
+                        <div class="materi-body">
+                            <div class="dialog-section">
+                                <h4>👥 Percakapan tentang Perbandingan Fisik:</h4>
+                                <div class="dialog-container">
+                                    <div class="dialog-line speaker-a">
+                                        <div class="speaker-name">أَحْمَد:</div>
+                                        <div class="dialog-content">
+                                            <div class="arabic-text">اُنْظُرْ يَا خَالِدُ! جِسْمُكَ كَبِيرٌ جِدًّا</div>
+                                            <div class="meaning">Lihat ya Khalid! Tubuhmu besar sekali</div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('dialog1')">🔊</button>
+                                    </div>
+                                    
+                                    <div class="dialog-line speaker-b">
+                                        <div class="speaker-name">خَالِد:</div>
+                                        <div class="dialog-content">
+                                            <div class="arabic-text">نَعَمْ، أَحْسَنْتَ. لَكِنْ جِسْمُ أَبِي أَكْبَرُ مِنْ جِسْمِي</div>
+                                            <div class="meaning">Ya, benar. Tetapi tubuh ayahku lebih besar dari tubuhku</div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('dialog2')">🔊</button>
+                                    </div>
+                                    
+                                    <div class="dialog-line speaker-a">
+                                        <div class="speaker-name">أَحْمَد:</div>
+                                        <div class="dialog-content">
+                                            <div class="arabic-text">أَيُّهُمَا أَقْوَى؟ جِسْمُكَ أَوْ جِسْمُ أَبِيكَ؟</div>
+                                            <div class="meaning">Mana yang lebih kuat? Tubuhmu atau tubuh ayahmu?</div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('dialog3')">🔊</button>
+                                    </div>
+                                    
+                                    <div class="dialog-line speaker-b">
+                                        <div class="speaker-name">خَالِد:</div>
+                                        <div class="dialog-content">
+                                            <div class="arabic-text">جِسْمِي قَوِيٌّ، لَكِنْ جِسْمُ أَبِي أَقْوَى</div>
+                                            <div class="meaning">Tubuhku kuat, tetapi tubuh ayahku lebih kuat</div>
+                                        </div>
+                                        <button class="audio-btn" onclick="playAudio('dialog4')">🔊</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="materi-card">
+                        <div class="materi-header">
+                            <h3>🎥 Video Percakapan</h3>
+                            <p>Tonton video percakapan nyata menggunakan Isim Tafdhil dalam kehidupan sehari-hari</p>
+                        </div>
+                        <div class="materi-body">
+                            <div style="text-align: center; margin: 20px 0;">
+                                <div style="background: linear-gradient(135deg, #4682B4, #00A9B5); border-radius: 20px; padding: 30px; margin: 20px 0; box-shadow: 0 15px 40px rgba(70, 130, 180, 0.3);">
+                                    <h4 style="color: white; margin-bottom: 20px; font-size: 22px;">🎬 Video Percakapan Pembelajaran</h4>
+                                    <div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; background: white; border-radius: 15px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                                        <iframe 
+                                            width="100%" 
+                                            height="315" 
+                                            src="https://www.youtube.com/embed/eT0zRmw5Wzw?si=n-WmRi5uS9hPoZVl" 
+                                            title="Video Percakapan Isim Tafdhil" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen
+                                            style="border-radius: 10px;">
+                                        </iframe>
+                                        <p style="margin-top: 15px; color: #666; font-weight: 600; font-size: 16px;">
+                                            🎯 Perhatikan cara penggunaan Isim Tafdhil dalam percakapan sehari-hari!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="learning-tip-box">
+                        <h4>💡 Tips Menggunakan dalam Kalimat:</h4>
+                        <ul>
+                            <li>🔗 Selalu gunakan <span class="arabic-text">مِنْ</span> (min) untuk menunjukkan perbandingan</li>
+                            <li>📍 Isim Tafdhil biasanya menjadi khabar (predikat) dalam kalimat</li>
+                            <li>🎯 Perhatikan urutan: yang dibandingkan + isim tafdhil + مِنْ + pembanding</li>
+                            <li>🔄 Gunakan <span class="arabic-text">لَكِنَّ</span> untuk menunjukkan kontras yang lebih halus</li>
+                            <li>🗣️ Latihan dengan membuat kalimat sendiri setiap hari</li>
+                            <li>🎥 Tonton video percakapan untuk memahami konteks penggunaan</li>
+                        </ul>
+                    </div>
+
+                    <div class="progress-section">
+                        <h3>🎯 Progress Belajar</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                        <p class="progress-text">Materi 3 dari 4 selesai (75%)</p>
+                        <div class="navigation-buttons">
+                            <button class="prev-button" onclick="showMateriMufradat()">
+                                ← Materi 2: Contoh Mufradat
+                            </button>
+                            <button class="next-button" onclick="showMateriLatihan()">
+                                Lanjut ke Materi 4: Latihan & Kuis →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Replace the current section content
+            const babSection = document.getElementById('bab-isim-tafdhil');
+            babSection.innerHTML = materiContent;
+        }
+
+        function showMateriLatihan() {
+            showInlineMessage('🎯 Membuka Materi 4: Latihan & Kuis!', 'success');
+            // Placeholder for Materi 4 content
+        }
+
+        function playAudio(wordId) {
+            // Placeholder for audio functionality
+            showInlineMessage(`🔊 Memutar audio untuk: ${wordId}`, 'info');
+        }
+
+        function resetBabIsimTafdhil() {
+            // Reset the bab content to original state
+            const babSection = document.getElementById('bab-isim-tafdhil');
+            const originalContent = `
+                <div class="back-navigation">
+                    <button class="back-button" onclick="showSection('peta')">
+                        ← Kembali ke Timeline
+                    </button>
+                </div>
+                
+                <h2 class="section-title">🏆 Bab 1: Isim Tafdhil</h2>
+                <div class="arabic-greeting" style="text-align: center; margin-bottom: 30px;">الاِسْمُ التَّفْضِيْلِ</div>
+                <p class="materi-intro">Selamat datang di Bab 1! Mari pelajari cara membandingkan benda dan sifat dalam bahasa Arab.</p>
+                
+                <div class="bab-grid">
+                    <div class="bab-card" onclick="showMateriDetail('pengertian')">
+                        <div class="bab-icon">📖</div>
+                        <div class="bab-content">
+                            <h3 class="bab-title">Materi 1: Pengertian & Ciri-ciri</h3>
+                            <div class="bab-arabic">مَا هُوَ الاِسْمُ التَّفْضِيْلِ؟</div>
+                            <p class="bab-description">Pelajari pengertian dasar Isim Tafdhil, fungsinya, dan ciri-ciri khusus dalam bahasa Arab.</p>
+                            <div class="bab-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                                <span class="progress-text">Tersedia</span>
+                            </div>
+                            <div class="bab-stats">
+                                <span class="stat-item">📚 Definisi</span>
+                                <span class="stat-item">🔍 Ciri-ciri</span>
+                                <span class="stat-item">⏱️ 15 Menit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bab-card" onclick="showMateriDetail('mufradat')">
+                        <div class="bab-icon">📝</div>
+                        <div class="bab-content">
+                            <h3 class="bab-title">Materi 2: Contoh Mufradat</h3>
+                            <div class="bab-arabic">أَمْثِلَةُ المُفْرَدَاتِ</div>
+                            <p class="bab-description">Pelajari berbagai kosakata Isim Tafdhil yang sering digunakan dalam kehidupan sehari-hari.</p>
+                            <div class="bab-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                                <span class="progress-text">Tersedia</span>
+                            </div>
+                            <div class="bab-stats">
+                                <span class="stat-item">📚 Kosakata</span>
+                                <span class="stat-item">🔊 Audio</span>
+                                <span class="stat-item">⏱️ 20 Menit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bab-card" onclick="showMateriDetail('kalimat')">
+                        <div class="bab-icon">💬</div>
+                        <div class="bab-content">
+                            <h3 class="bab-title">Materi 3: Contoh Kalimat</h3>
+                            <div class="bab-arabic">أَمْثِلَةُ الجُمَلِ</div>
+                            <p class="bab-description">Lihat berbagai contoh penggunaan Isim Tafdhil dalam kalimat dan percakapan sehari-hari.</p>
+                            <div class="bab-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                                <span class="progress-text">Tersedia</span>
+                            </div>
+                            <div class="bab-stats">
+                                <span class="stat-item">📝 Kalimat</span>
+                                <span class="stat-item">🗣️ Dialog</span>
+                                <span class="stat-item">⏱️ 18 Menit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bab-card" onclick="showMateriDetail('latihan')">
+                        <div class="bab-icon">🎯</div>
+                        <div class="bab-content">
+                            <h3 class="bab-title">Materi 4: Latihan & Kuis</h3>
+                            <div class="bab-arabic">التَّدْرِيْبَاتُ وَالاِخْتِبَارُ</div>
+                            <p class="bab-description">Uji pemahamanmu dengan latihan soal dan kuis interaktif untuk menguasai Isim Tafdhil.</p>
+                            <div class="bab-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%"></div>
+                                </div>
+                                <span class="progress-text">Tersedia</span>
+                            </div>
+                            <div class="bab-stats">
+                                <span class="stat-item">❓ 15 Soal</span>
+                                <span class="stat-item">🏆 Kuis</span>
+                                <span class="stat-item">⏱️ 17 Menit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="learning-tips">
+                    <h3 class="tips-title">💡 Tips Belajar Isim Tafdhil</h3>
+                    <div class="tips-grid">
+                        <div class="tip-item">
+                            <span class="tip-icon">📚</span>
+                            <p>Mulai dengan memahami pengertian dasar terlebih dahulu</p>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-icon">🔢</span>
+                            <p>Hafalkan rumus pembentukan: أَفْعَل (af'al)</p>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-icon">💭</span>
+                            <p>Pikirkan perbandingan dalam bahasa Indonesia dulu</p>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-icon">✍️</span>
+                            <p>Latihan membuat kalimat sendiri setelah belajar</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            babSection.innerHTML = originalContent;
+            showInlineMessage('🔙 Kembali ke halaman utama Bab 1!', 'success');
+        }
+
+        function showInlineMessage(message, type = 'info') {
+            // Remove existing message if any
+            const existingMessage = document.querySelector('.inline-message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+            
+            // Create new message element
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'inline-message';
+            messageDiv.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 25px;
+                border-radius: 10px;
+                font-weight: 600;
+                font-size: 16px;
+                z-index: 9999;
+                max-width: 400px;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+                animation: slideIn 0.3s ease-out;
+            `;
+            
+            // Set colors based on type
+            if (type === 'success') {
+                messageDiv.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+                messageDiv.style.color = 'white';
+            } else if (type === 'warning') {
+                messageDiv.style.background = 'linear-gradient(135deg, #ffc107, #ffca2c)';
+                messageDiv.style.color = '#333';
+            } else {
+                messageDiv.style.background = 'linear-gradient(135deg, #17a2b8, #20c997)';
+                messageDiv.style.color = 'white';
+            }
+            
+            messageDiv.textContent = message;
+            
+            // Add animation styles
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+                @keyframes slideOut {
+                    from {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                    to {
+                        transform: translateX(100%);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            document.body.appendChild(messageDiv);
+            
+            // Auto remove after 4 seconds
+            setTimeout(() => {
+                messageDiv.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => {
+                    if (messageDiv.parentNode) {
+                        messageDiv.parentNode.removeChild(messageDiv);
+                    }
+                    if (style.parentNode) {
+                        style.parentNode.removeChild(style);
+                    }
+                }, 300);
+            }, 4000);
+        }
+
+        // Initialize Element SDK if available
+        if (window.elementSdk) {
+            const defaultConfig = {
+                website_title: "Portal Petualang Bahasa Arab",
+                greeting_text: "Assalamu'alaikum",
+                hero_subtitle: "Siap berpetualang hari ini?",
+                primary_color: "#00A9B5",
+                secondary_color: "#4682B4",
+                accent_color: "#FF8C00",
+                background_color: "#87CEEB",
+                text_color: "#333333"
+            };
+
+            async function onConfigChange(config) {
+                // Update website title
+                const titleElement = document.getElementById('website-title');
+                if (titleElement) {
+                    titleElement.textContent = config.website_title || defaultConfig.website_title;
+                }
+
+                // Update greeting text
+                const greetingElement = document.getElementById('greeting-text');
+                if (greetingElement) {
+                    greetingElement.textContent = config.greeting_text || defaultConfig.greeting_text;
+                }
+
+                // Update hero subtitle
+                const subtitleElement = document.getElementById('hero-subtitle');
+                if (subtitleElement) {
+                    subtitleElement.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+                }
+
+                // Update colors
+                const root = document.documentElement;
+                if (config.primary_color) {
+                    root.style.setProperty('--primary-color', config.primary_color);
+                }
+                if (config.secondary_color) {
+                    root.style.setProperty('--secondary-color', config.secondary_color);
+                }
+                if (config.accent_color) {
+                    root.style.setProperty('--accent-color', config.accent_color);
+                }
+                if (config.background_color) {
+                    root.style.setProperty('--background-color', config.background_color);
+                }
+                if (config.text_color) {
+                    root.style.setProperty('--text-color', config.text_color);
+                }
+            }
+
+            function mapToCapabilities(config) {
+                return {
+                    recolorables: [
+                        {
+                            get: () => config.primary_color || defaultConfig.primary_color,
+                            set: (value) => {
+                                config.primary_color = value;
                                 window.elementSdk.setConfig({ primary_color: value });
                             }
-                        }
-                    },
-                    {
-                        get: () => config.secondary_color || defaultConfig.secondary_color,
-                        set: (value) => {
-                            if (window.elementSdk) {
-                                window.elementSdk.config.secondary_color = value;
+                        },
+                        {
+                            get: () => config.secondary_color || defaultConfig.secondary_color,
+                            set: (value) => {
+                                config.secondary_color = value;
                                 window.elementSdk.setConfig({ secondary_color: value });
                             }
-                        }
-                    },
-                    {
-                        get: () => config.accent_color || defaultConfig.accent_color,
-                        set: (value) => {
-                            if (window.elementSdk) {
-                                window.elementSdk.config.accent_color = value;
+                        },
+                        {
+                            get: () => config.accent_color || defaultConfig.accent_color,
+                            set: (value) => {
+                                config.accent_color = value;
                                 window.elementSdk.setConfig({ accent_color: value });
                             }
+                        },
+                        {
+                            get: () => config.background_color || defaultConfig.background_color,
+                            set: (value) => {
+                                config.background_color = value;
+                                window.elementSdk.setConfig({ background_color: value });
+                            }
+                        },
+                        {
+                            get: () => config.text_color || defaultConfig.text_color,
+                            set: (value) => {
+                                config.text_color = value;
+                                window.elementSdk.setConfig({ text_color: value });
+                            }
                         }
-                    }
-                ],
-                borderables: [],
-                fontEditable: undefined,
-                fontSizeable: undefined
-            };
-        }
+                    ],
+                    borderables: [],
+                    fontEditable: undefined,
+                    fontSizeable: undefined
+                };
+            }
 
-        // Map configuration to edit panel values
-        function mapToEditPanelValues(config) {
-            return new Map([
-                ["website_title", config.website_title || defaultConfig.website_title],
-                ["greeting_text", config.greeting_text || defaultConfig.greeting_text],
-                ["student_name", config.student_name || defaultConfig.student_name],
-                ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
-                ["cta_button", config.cta_button || defaultConfig.cta_button],
-                ["nav_home", config.nav_home || defaultConfig.nav_home],
-                ["nav_guide", config.nav_guide || defaultConfig.nav_guide],
-                ["nav_map", config.nav_map || defaultConfig.nav_map],
-                ["nav_material", config.nav_material || defaultConfig.nav_material],
-                ["nav_exercise", config.nav_exercise || defaultConfig.nav_exercise]
-            ]);
-        }
+            function mapToEditPanelValues(config) {
+                return new Map([
+                    ["website_title", config.website_title || defaultConfig.website_title],
+                    ["greeting_text", config.greeting_text || defaultConfig.greeting_text],
+                    ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle]
+                ]);
+            }
 
-        // Initialize Element SDK
-        if (window.elementSdk) {
             window.elementSdk.init({
                 defaultConfig,
                 onConfigChange,
@@ -2631,672 +3702,6 @@
                 mapToEditPanelValues
             });
         }
-
-        // Navigation menu functionality
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                
-                // Special handling for materi link
-                if (targetId === 'materi') {
-                    showSection('materi-detail');
-                } else {
-                    showSection(targetId);
-                }
-            });
-        });
-
-        // Bab card click functionality
-        document.querySelectorAll('.bab-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const babType = this.getAttribute('data-bab');
-                const babTitle = this.querySelector('.bab-title').textContent;
-                
-                // Handle Isim Tafdhil specifically
-                if (babType === 'isim-tafdhil') {
-                    showSection('isim-tafdhil-detail');
-                    return;
-                }
-                
-                // Show coming soon message for other babs
-                showComingSoonMessage(babTitle);
-            });
-        });
-
-        // Timeline item click functionality
-        document.querySelectorAll('.timeline-item').forEach(item => {
-            item.addEventListener('click', function() {
-                const babType = this.getAttribute('data-bab');
-                const babTitle = this.querySelector('h3').textContent;
-                const isCompleted = this.classList.contains('completed');
-                const isCurrent = this.classList.contains('current');
-                const isLocked = this.classList.contains('locked');
-                
-                if (isLocked) {
-                    // Show locked message
-                    showLockedMessage(babTitle);
-                    return;
-                }
-                
-                // Handle Isim Tafdhil specifically
-                if (babType === 'isim-tafdhil') {
-                    showSection('isim-tafdhil-detail');
-                    return;
-                }
-                
-                // Show coming soon message for other babs
-                showComingSoonMessage(babTitle);
-            });
-        });
-
-        // Function to show coming soon message
-        function showComingSoonMessage(babTitle) {
-            const message = document.createElement('div');
-            message.style.cssText = `
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: white;
-                padding: 40px;
-                border-radius: 25px;
-                box-shadow: 0 25px 80px rgba(0,0,0,0.3);
-                z-index: 1000;
-                text-align: center;
-                max-width: 500px;
-                width: 90%;
-            `;
-            
-            message.innerHTML = `
-                <div style="font-size: 60px; margin-bottom: 20px;">🚀</div>
-                <h3 style="color: #00A9B5; margin-bottom: 15px; font-size: 24px;">${babTitle}</h3>
-                <p style="color: #666; margin-bottom: 25px; font-size: 18px; line-height: 1.6;">
-                    Materi ini sedang dalam pengembangan dan akan segera tersedia! 
-                    Tetap semangat belajar bahasa Arab ya! 📚✨
-                </p>
-                <button onclick="this.parentElement.remove()" style="
-                    background: linear-gradient(135deg, #FF8C00, #FFD700); 
-                    color: white; 
-                    border: none; 
-                    padding: 15px 30px; 
-                    border-radius: 50px; 
-                    cursor: pointer; 
-                    font-weight: 800;
-                    font-size: 16px;
-                    font-family: 'Nunito', sans-serif;
-                    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
-                    transition: all 0.3s;
-                " onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                    Tutup
-                </button>
-            `;
-            
-            document.body.appendChild(message);
-            
-            // Auto close after 8 seconds
-            setTimeout(() => {
-                if (message.parentNode) {
-                    message.remove();
-                }
-            }, 8000);
-            
-            // Add entrance animation
-            message.style.opacity = '0';
-            message.style.transform = 'translate(-50%, -50%) scale(0.8)';
-            setTimeout(() => {
-                message.style.transition = 'all 0.3s ease';
-                message.style.opacity = '1';
-                message.style.transform = 'translate(-50%, -50%) scale(1)';
-            }, 10);
-        }
-
-        // Function to show locked message
-        function showLockedMessage(babTitle) {
-            const message = document.createElement('div');
-            message.style.cssText = `
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: white;
-                padding: 40px;
-                border-radius: 25px;
-                box-shadow: 0 25px 80px rgba(0,0,0,0.3);
-                z-index: 1000;
-                text-align: center;
-                max-width: 500px;
-                width: 90%;
-            `;
-            
-            message.innerHTML = `
-                <div style="font-size: 60px; margin-bottom: 20px;">🔒</div>
-                <h3 style="color: #6c757d; margin-bottom: 15px; font-size: 24px;">${babTitle}</h3>
-                <p style="color: #666; margin-bottom: 25px; font-size: 18px; line-height: 1.6;">
-                    Bab ini masih terkunci! Selesaikan bab sebelumnya terlebih dahulu untuk membuka petualangan selanjutnya. 
-                    Semangat belajar! 💪✨
-                </p>
-                <button onclick="this.parentElement.remove()" style="
-                    background: linear-gradient(135deg, #6c757d, #495057); 
-                    color: white; 
-                    border: none; 
-                    padding: 15px 30px; 
-                    border-radius: 50px; 
-                    cursor: pointer; 
-                    font-weight: 800;
-                    font-size: 16px;
-                    font-family: 'Nunito', sans-serif;
-                    box-shadow: 0 8px 25px rgba(108, 117, 125, 0.4);
-                    transition: all 0.3s;
-                " onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                    Tutup
-                </button>
-            `;
-            
-            document.body.appendChild(message);
-            
-            // Auto close after 6 seconds
-            setTimeout(() => {
-                if (message.parentNode) {
-                    message.remove();
-                }
-            }, 6000);
-            
-            // Add entrance animation
-            message.style.opacity = '0';
-            message.style.transform = 'translate(-50%, -50%) scale(0.8)';
-            setTimeout(() => {
-                message.style.transition = 'all 0.3s ease';
-                message.style.opacity = '1';
-                message.style.transform = 'translate(-50%, -50%) scale(1)';
-            }, 10);
-        }
-
-        // Navigation function
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.main-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // Show target section
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.style.display = 'block';
-                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-
-        // Name input functionality
-        const nameInput = document.getElementById('student-name-input');
-        const ctaButton = document.getElementById('cta-button');
-        const studentNameDisplay = document.getElementById('student-name');
-
-        // Enable/disable button based on name input
-        nameInput.addEventListener('input', function() {
-            const name = this.value.trim();
-            if (name.length >= 2) {
-                ctaButton.disabled = false;
-                ctaButton.style.background = 'linear-gradient(135deg, #FF8C00, #FFD700)';
-                ctaButton.style.cursor = 'pointer';
-                
-                // Update student name in greeting
-                studentNameDisplay.textContent = name;
-                
-                // Update button text with name
-                ctaButton.textContent = `🚀 Ayo Mulai Belajar, ${name}!`;
-            } else {
-                ctaButton.disabled = true;
-                ctaButton.style.background = 'linear-gradient(135deg, #ccc, #999)';
-                ctaButton.style.cursor = 'not-allowed';
-                ctaButton.textContent = '🚀 Ayo Mulai Belajar!';
-                
-                // Reset student name to default
-                studentNameDisplay.textContent = 'Petualang';
-            }
-        });
-
-        // Add enter key support for name input
-        nameInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter' && !ctaButton.disabled) {
-                ctaButton.click();
-            }
-        });
-
-        // Add input validation and character limit feedback
-        nameInput.addEventListener('input', function() {
-            const remaining = 20 - this.value.length;
-            const hint = document.querySelector('.input-hint');
-            
-            if (remaining <= 5 && remaining > 0) {
-                hint.textContent = `💡 ${remaining} karakter tersisa`;
-                hint.style.color = '#FF8C00';
-            } else if (remaining === 0) {
-                hint.textContent = '⚠️ Maksimal 20 karakter';
-                hint.style.color = '#e74c3c';
-            } else {
-                hint.textContent = '💡 Nama akan muncul di seluruh petualangan belajarmu!';
-                hint.style.color = '#666';
-            }
-        });
-
-        // CTA Button interaction - redirect to materi
-        ctaButton.addEventListener('click', function() {
-            if (this.disabled) return;
-            
-            const studentName = nameInput.value.trim();
-            
-            // Show loading state
-            this.textContent = '✨ Memuat petualangan...';
-            this.disabled = true;
-            
-            // Hide name input section with animation
-            const nameSection = document.getElementById('name-input-section');
-            nameSection.style.transition = 'all 0.5s ease';
-            nameSection.style.opacity = '0';
-            nameSection.style.transform = 'translateY(-20px)';
-            
-            // Simulate loading and redirect to materi
-            setTimeout(() => {
-                this.textContent = `🎉 Selamat datang, ${studentName}!`;
-                
-                // Redirect to materi section
-                setTimeout(() => {
-                    showSection('materi-detail');
-                    this.textContent = `🚀 Ayo Mulai Belajar, ${studentName}!`;
-                    this.disabled = false;
-                    
-                    // Hide name input section completely
-                    nameSection.style.display = 'none';
-                }, 1500);
-            }, 1500);
-        });
-
-        // Interactive card hover effects
-        document.querySelectorAll('.interactive-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const title = this.querySelector('.interactive-title').textContent;
-                
-                // Show activity message
-                const message = document.createElement('div');
-                message.style.cssText = `
-                    position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background: white;
-                    padding: 30px;
-                    border-radius: 20px;
-                    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-                    z-index: 1000;
-                    text-align: center;
-                    max-width: 400px;
-                `;
-                message.innerHTML = `
-                    <h3 style="color: #00A9B5; margin-bottom: 15px;">🎯 ${title}</h3>
-                    <p style="color: #666; margin-bottom: 20px;">Fitur ini akan segera tersedia! Tetap semangat belajar bahasa Arab ya! 📚✨</p>
-                    <button onclick="this.parentElement.remove()" style="background: linear-gradient(135deg, #FF8C00, #FFD700); color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: 800;">Tutup</button>
-                `;
-                document.body.appendChild(message);
-                
-                // Auto close after 5 seconds
-                setTimeout(() => {
-                    if (message.parentNode) {
-                        message.remove();
-                    }
-                }, 5000);
-            });
-        });
-
-        // Add CSS animation for notifications
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from {
-                    transform: translateX(100%);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Add parallax effect to background elements
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.adventure-bg');
-            const speed = scrolled * 0.5;
-            
-            if (parallax) {
-                parallax.style.transform = `translateY(${speed}px)`;
-            }
-        });
-
-        // Add entrance animations when elements come into view
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all feature cards and map steps
-        document.querySelectorAll('.feature-card, .map-step, .interactive-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            observer.observe(el);
-        });
-
-        // Add fadeInUp animation
-        const animationStyle = document.createElement('style');
-        animationStyle.textContent = `
-            @keyframes fadeInUp {
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        `;
-        document.head.appendChild(animationStyle);
-
-        // Function to show specific materi
-        function showMateri(materiId) {
-            // Hide all materi content
-            document.querySelectorAll('.materi-content').forEach(content => {
-                content.style.display = 'none';
-            });
-            
-            // Hide navigation menu
-            const navigation = document.querySelector('.materi-navigation');
-            if (navigation) {
-                navigation.style.display = 'none';
-            }
-            
-            // Show selected materi
-            const selectedMateri = document.getElementById(materiId);
-            if (selectedMateri) {
-                selectedMateri.style.display = 'block';
-                selectedMateri.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-
-        // Function to go back to materi navigation
-        function backToMateriNavigation() {
-            // Hide all materi content
-            document.querySelectorAll('.materi-content').forEach(content => {
-                content.style.display = 'none';
-            });
-            
-            // Show navigation menu
-            const navigation = document.querySelector('.materi-navigation');
-            if (navigation) {
-                navigation.style.display = 'block';
-                navigation.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-
-        // Quiz Materi 1 functionality
-        function checkQuizMateri1() {
-            const answers = {
-                q1: 'b', // "Lebih" atau "paling"
-                q2: 'b', // Membandingkan dua hal atau lebih
-                q3: 'b', // Tidak pernah menggunakan tanwin
-                q4: 'b', // أَفْعَلُ (af'alu)
-                q5: 'b'  // الْمَدْرَسَةُ أَكْبَرُ - الْمَكْتَبُ أَكْبَرُ
-            };
-
-            let score = 0;
-            let totalQuestions = 5;
-            let results = [];
-
-            // Check each question
-            for (let i = 1; i <= totalQuestions; i++) {
-                const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
-                const questionDiv = document.querySelector(`[data-question="${i}"]`);
-                
-                if (selectedAnswer) {
-                    if (selectedAnswer.value === answers[`q${i}`]) {
-                        score++;
-                        results.push({
-                            question: i,
-                            correct: true,
-                            selected: selectedAnswer.value
-                        });
-                        // Mark correct answer
-                        questionDiv.style.borderLeft = '5px solid #28a745';
-                        questionDiv.style.background = '#d4edda';
-                    } else {
-                        results.push({
-                            question: i,
-                            correct: false,
-                            selected: selectedAnswer.value,
-                            correctAnswer: answers[`q${i}`]
-                        });
-                        // Mark incorrect answer
-                        questionDiv.style.borderLeft = '5px solid #dc3545';
-                        questionDiv.style.background = '#f8d7da';
-                    }
-                } else {
-                    results.push({
-                        question: i,
-                        correct: false,
-                        selected: null
-                    });
-                    // Mark unanswered
-                    questionDiv.style.borderLeft = '5px solid #ffc107';
-                    questionDiv.style.background = '#fff3cd';
-                }
-            }
-
-            // Show results
-            showQuizResults(score, totalQuestions, results);
-        }
-
-        function showQuizResults(score, total, results) {
-            const resultDiv = document.getElementById('quiz-result-materi1');
-            const percentage = Math.round((score / total) * 100);
-            
-            let resultHTML = '';
-            let resultClass = '';
-            let resultIcon = '';
-            let resultMessage = '';
-
-            if (percentage >= 80) {
-                resultClass = 'success';
-                resultIcon = '🎉';
-                resultMessage = 'Luar biasa! Kamu sangat memahami materi Isim Tafdhil!';
-            } else if (percentage >= 60) {
-                resultClass = 'warning';
-                resultIcon = '👍';
-                resultMessage = 'Bagus! Kamu sudah cukup memahami, tapi masih bisa lebih baik lagi!';
-            } else {
-                resultClass = 'danger';
-                resultIcon = '💪';
-                resultMessage = 'Jangan menyerah! Baca ulang materi dan coba lagi ya!';
-            }
-
-            resultHTML = `
-                <div style="background: ${resultClass === 'success' ? '#d4edda' : resultClass === 'warning' ? '#fff3cd' : '#f8d7da'}; 
-                           border: 2px solid ${resultClass === 'success' ? '#28a745' : resultClass === 'warning' ? '#ffc107' : '#dc3545'}; 
-                           border-radius: 15px; padding: 25px; text-align: center;">
-                    <div style="font-size: 48px; margin-bottom: 15px;">${resultIcon}</div>
-                    <h3 style="color: ${resultClass === 'success' ? '#155724' : resultClass === 'warning' ? '#856404' : '#721c24'}; 
-                              margin-bottom: 15px; font-size: 24px;">
-                        Skor: ${score}/${total} (${percentage}%)
-                    </h3>
-                    <p style="color: ${resultClass === 'success' ? '#155724' : resultClass === 'warning' ? '#856404' : '#721c24'}; 
-                             font-size: 18px; font-weight: 600; margin-bottom: 20px;">
-                        ${resultMessage}
-                    </p>
-                    
-                    <div style="background: white; padding: 20px; border-radius: 10px; margin-top: 20px;">
-                        <h4 style="color: #333; margin-bottom: 15px;">📋 Pembahasan Jawaban:</h4>
-                        <div style="text-align: left; font-size: 14px; line-height: 1.6;">
-                            <p><strong>1.</strong> Isim Tafdhil memiliki makna <strong>"lebih" atau "paling"</strong> untuk perbandingan.</p>
-                            <p><strong>2.</strong> Digunakan untuk <strong>membandingkan dua hal atau lebih</strong>.</p>
-                            <p><strong>3.</strong> Yang <strong>bukan</strong> ciri Isim Tafdhil: <strong>selalu menggunakan tanwin</strong> (karena Isim Tafdhil tidak pernah menggunakan tanwin).</p>
-                            <p><strong>4.</strong> Mengikuti pola <strong>أَفْعَلُ (af'alu)</strong>.</p>
-                            <p><strong>5.</strong> Tidak terikat gender: <strong>الْمَدْرَسَةُ أَكْبَرُ - الْمَكْتَبُ أَكْبَرُ</strong> (sama-sama أَكْبَرُ).</p>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-            resultDiv.innerHTML = resultHTML;
-            resultDiv.style.display = 'block';
-            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        function resetQuizMateri1() {
-            // Reset all radio buttons
-            document.querySelectorAll('input[type="radio"]').forEach(radio => {
-                radio.checked = false;
-            });
-
-            // Reset question styling
-            document.querySelectorAll('.quiz-question').forEach(question => {
-                question.style.borderLeft = '5px solid #1976d2';
-                question.style.background = '#f8f9fa';
-            });
-
-            // Hide results
-            const resultDiv = document.getElementById('quiz-result-materi1');
-            resultDiv.style.display = 'none';
-
-            // Scroll to top of quiz
-            document.getElementById('quiz-materi-1').scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
-        // Function to show Quiz Materi 1
-        function showQuizMateri1() {
-            // Hide all materi content
-            document.querySelectorAll('.materi-content').forEach(content => {
-                content.style.display = 'none';
-            });
-            
-            // Hide navigation menu
-            const navigation = document.querySelector('.materi-navigation');
-            if (navigation) {
-                navigation.style.display = 'none';
-            }
-            
-            // Show quiz materi 1
-            const quizMateri1 = document.getElementById('quiz-materi-1');
-            if (quizMateri1) {
-                quizMateri1.style.display = 'block';
-                quizMateri1.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-
-        // Quiz functionality for Isim Tafdhil
-        function startQuiz(quizType) {
-            let quizTitle = '';
-            let quizDescription = '';
-            
-            switch(quizType) {
-                case 'materi-1-latihan':
-                    quizTitle = '📖 Latihan Materi 1: Pengertian & Ciri-ciri';
-                    quizDescription = 'Uji pemahamanmu tentang pengertian dan ciri-ciri Isim Tafdhil!';
-                    break;
-                case 'materi-2-latihan':
-                    quizTitle = '📚 Latihan Materi 2: Mufradat/Kosakata';
-                    quizDescription = 'Uji hafalan kosakata Isim Tafdhil yang sudah dipelajari!';
-                    break;
-                case 'materi-3-latihan':
-                    quizTitle = '💬 Latihan Materi 3: Contoh Kalimat';
-                    quizDescription = 'Latihan menyusun dan memahami kalimat menggunakan Isim Tafdhil!';
-                    break;
-                case 'materi-4-latihan':
-                    quizTitle = '🎵 Latihan Materi 4: Lagu & Pembelajaran';
-                    quizDescription = 'Uji pemahamanmu tentang lagu dan aktivitas pembelajaran Isim Tafdhil!';
-                    break;
-                case 'latihan-akhir-semua':
-                    quizTitle = '🏆 Latihan Akhir: Uji Semua Materi';
-                    quizDescription = 'Tantangan akhir yang menguji semua materi Isim Tafdhil yang telah dipelajari!';
-                    break;
-                case 'vocabulary':
-                    quizTitle = '📚 Kuis Kosakata Isim Tafdhil';
-                    quizDescription = 'Uji hafalan kosakata Isim Tafdhil yang sudah dipelajari!';
-                    break;
-                case 'sentences':
-                    quizTitle = '💬 Susun Kalimat';
-                    quizDescription = 'Latihan menyusun kalimat menggunakan Isim Tafdhil!';
-                    break;
-                case 'comparison':
-                    quizTitle = '⚖️ Latihan Perbandingan';
-                    quizDescription = 'Bandingkan dua objek menggunakan Isim Tafdhil!';
-                    break;
-            }
-            
-            // Show quiz coming soon message
-            const message = document.createElement('div');
-            message.style.cssText = `
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: white;
-                padding: 40px;
-                border-radius: 25px;
-                box-shadow: 0 25px 80px rgba(0,0,0,0.3);
-                z-index: 1000;
-                text-align: center;
-                max-width: 500px;
-                width: 90%;
-            `;
-            
-            message.innerHTML = `
-                <div style="font-size: 60px; margin-bottom: 20px;">🎯</div>
-                <h3 style="color: #00A9B5; margin-bottom: 15px; font-size: 24px;">${quizTitle}</h3>
-                <p style="color: #666; margin-bottom: 25px; font-size: 18px; line-height: 1.6;">
-                    ${quizDescription}<br><br>
-                    Fitur kuis interaktif ini sedang dalam pengembangan dan akan segera tersedia! 
-                    Tetap semangat belajar Isim Tafdhil ya! 🏆✨
-                </p>
-                <button onclick="this.parentElement.remove()" style="
-                    background: linear-gradient(135deg, #FF8C00, #FFD700); 
-                    color: white; 
-                    border: none; 
-                    padding: 15px 30px; 
-                    border-radius: 50px; 
-                    cursor: pointer; 
-                    font-weight: 800;
-                    font-size: 16px;
-                    font-family: 'Nunito', sans-serif;
-                    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
-                    transition: all 0.3s;
-                " onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                    Tutup
-                </button>
-            `;
-            
-            document.body.appendChild(message);
-            
-            // Auto close after 8 seconds
-            setTimeout(() => {
-                if (message.parentNode) {
-                    message.remove();
-                }
-            }, 8000);
-            
-            // Add entrance animation
-            message.style.opacity = '0';
-            message.style.transform = 'translate(-50%, -50%) scale(0.8)';
-            setTimeout(() => {
-                message.style.transition = 'all 0.3s ease';
-                message.style.opacity = '1';
-                message.style.transform = 'translate(-50%, -50%) scale(1)';
-            }, 10);
-        }
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'998351ee465d3fca',t:'MTc2MjA4MzIzOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9983be02c4faef69',t:'MTc2MjA4NzY2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
